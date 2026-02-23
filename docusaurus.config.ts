@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: "https://docs.insync.pro",
+  url: 'http://docs:80',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -37,6 +37,7 @@ const config: Config = {
   },
 
   plugins: [require.resolve('docusaurus-plugin-image-zoom')],
+  themes: ['docusaurus-theme-search-typesense'],
 
   presets: [
     [
@@ -77,11 +78,27 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/social-card.jpg",
 
+    typesense: {
+      typesenseCollectionName: 'appse-ai-docs', // Replace with your own doc site's name.
+      typesenseServerConfig: {
+        nodes: [
+          {
+            host: 'localhost', // Placeholder: Update with your real Typesense host
+            port: 8108,        // Placeholder: Update with your real Typesense port
+            protocol: 'http',  // Placeholder: Update with your real Typesense protocol
+          },
+        ],
+        apiKey: 'xyz', // Placeholder: Update with your real Typesense search-only API key
+      },
+      typesenseSearchParameters: {},
+      contextualSearch: true,
+    },
+
     zoom: {
       selector: '.markdown img',
       background: {
-          light: 'rgb(255, 255, 255)',
-          dark: 'rgb(50, 50, 50)'
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(50, 50, 50)'
       },
       config: {
         margin: 100,

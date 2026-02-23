@@ -1,2 +1,4 @@
-# gitignore added
-.gitignore
+node_modules
+build
+.docusaurus
+typesense-data

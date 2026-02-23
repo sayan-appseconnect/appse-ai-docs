@@ -1,0 +1,73 @@
+services:
+  docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docs-frontend
+    ports:
+      - "3000:80"
+    networks:
+      - search-net
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    restart: always
+
+  typesense:
+    image: typesense/typesense:27.1
+    container_name: typesense-server
+    ports:
+      - "8108:8108"
+    volumes:
+      - ./typesense-data:/data
+    environment:
+      - TYPESENSE_API_KEY=xyz
+      - TYPESENSE_DATA_DIR=/data
+    networks:
+      - search-net
+
+    restart: always
+
+  scraper:
+    image: typesense/docsearch-scraper:latest
+    container_name: docs-scraper
+    depends_on:
+      docs:
+        condition: service_healthy
+      typesense:
+        condition: service_started
+    networks:
+      - search-net
+    environment:
+      - TYPESENSE_HOST=typesense
+      - TYPESENSE_PORT=8108
+      - TYPESENSE_PROTOCOL=http
+      - TYPESENSE_API_KEY=xyz
+      - >-
+        CONFIG={"index_name":"appse-ai-docs","start_urls":["http://docs/"],"sitemap_urls":["http://docs/sitemap.xml"],"allowed_domains":["docs","docs.insync.pro","localhost"],"sitemap_alternate_links":true,"stop_urls":[],"selectors":{"lvl0":{"selector":"(//ul[contains(@class,'menu__list')]//a[contains(@class,'menu__link menu__link--sublist menu__link--active')]/text()|//nav[contains(@class,'navbar')]//a[contains(@class,'navbar__link--active')]/text())[last()]","type":"xpath","global":true,"default_value":"Documentation"},"lvl1":"header h1","lvl2":"article h2","lvl3":"article h3","lvl4":"article h4","lvl5":"article h5","lvl6":"article h6","text":"article p, article li"},"strip_chars":" .,;:#"}
+    # We do not want restart: always because we only need it to run once per composition/update
+    restart: "no"
+
+  verifier:
+    image: node:18-alpine
+    container_name: docs-verifier
+    working_dir: /app
+    volumes:
+      - ./check-index.js:/app/check-index.js:ro
+    depends_on:
+      scraper:
+        condition: service_completed_successfully
+    networks:
+      - search-net
+    environment:
+      - TYPESENSE_HOST=typesense
+      - TYPESENSE_PORT=8108
+      - TYPESENSE_API_KEY=xyz
+    restart: "no"
+    command: ["node", "check-index.js"]
+
+networks:
+  search-net:
+    driver: bridge

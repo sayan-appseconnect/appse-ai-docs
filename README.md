@@ -109,6 +109,10 @@ Integration guides are located in [docs/app_integrations/](docs/app_integrations
 - [OpenAI](docs/app_integrations/openai.md)
 - [HTTP/Generic Integrations](docs/app_integrations/http.md)
 
+## 🔍 Search Integration
+
+This project is integrated with [Typesense](https://typesense.org/) to provide instant documentation search. For details on how the local auto-indexing works and instructions on how to set it up in production, please read the [Search Setup & Architecture Guide](SEARCH_SETUP.md).
+
 ## 🛠️ Configuration
 
 - **Docusaurus Config**: Edit [docusaurus.config.ts](docusaurus.config.ts) for site-wide settings
