@@ -2,9 +2,9 @@ const http = require('http');
 
 console.log('🔍 Checking Typesense search index for documentation...');
 
-const host = process.env.TYPESENSE_HOST || 'localhost';
-const port = process.env.TYPESENSE_PORT || 8108;
-const apiKey = process.env.TYPESENSE_API_KEY || 'xyz';
+const host = process.env.TYPESENSE_HOST;
+const port = process.env.TYPESENSE_PORT;
+const apiKey = process.env.TYPESENSE_ADMIN_API_KEY;
 
 const options = {
   hostname: host,

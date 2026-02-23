@@ -3,6 +3,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - TYPESENSE_HOST=${TYPESENSE_HOST}
+        - TYPESENSE_PORT=${TYPESENSE_PORT}
+        - TYPESENSE_PROTOCOL=${TYPESENSE_PROTOCOL}
+        - TYPESENSE_SEARCH_API_KEY=${TYPESENSE_SEARCH_API_KEY}
     container_name: docs-frontend
     ports:
       - "3000:80"
@@ -23,7 +28,7 @@ services:
     volumes:
       - ./typesense-data:/data
     environment:
-      - TYPESENSE_API_KEY=xyz
+      - TYPESENSE_API_KEY=${TYPESENSE_ADMIN_API_KEY}
       - TYPESENSE_DATA_DIR=/data
     networks:
       - search-net
@@ -42,9 +47,9 @@ services:
       - search-net
     environment:
       - TYPESENSE_HOST=typesense
-      - TYPESENSE_PORT=8108
-      - TYPESENSE_PROTOCOL=http
-      - TYPESENSE_API_KEY=xyz
+      - TYPESENSE_PORT=${TYPESENSE_PORT}
+      - TYPESENSE_PROTOCOL=${TYPESENSE_PROTOCOL}
+      - TYPESENSE_API_KEY=${TYPESENSE_ADMIN_API_KEY}
       - >-
         CONFIG={"index_name":"appse-ai-docs","start_urls":["http://docs/"],"sitemap_urls":["http://docs/sitemap.xml"],"allowed_domains":["docs","docs.insync.pro","localhost"],"sitemap_alternate_links":true,"stop_urls":[],"selectors":{"lvl0":{"selector":"(//ul[contains(@class,'menu__list')]//a[contains(@class,'menu__link menu__link--sublist menu__link--active')]/text()|//nav[contains(@class,'navbar')]//a[contains(@class,'navbar__link--active')]/text())[last()]","type":"xpath","global":true,"default_value":"Documentation"},"lvl1":"header h1","lvl2":"article h2","lvl3":"article h3","lvl4":"article h4","lvl5":"article h5","lvl6":"article h6","text":"article p, article li"},"strip_chars":" .,;:#"}
     # We do not want restart: always because we only need it to run once per composition/update
@@ -55,7 +60,7 @@ services:
     container_name: docs-verifier
     working_dir: /app
     volumes:
-      - ./check-index.js:/app/check-index.js:ro
+      - ./docker-scripts/check-index.js:/app/check-index.js:ro
     depends_on:
       scraper:
         condition: service_completed_successfully
@@ -63,8 +68,8 @@ services:
       - search-net
     environment:
       - TYPESENSE_HOST=typesense
-      - TYPESENSE_PORT=8108
-      - TYPESENSE_API_KEY=xyz
+      - TYPESENSE_PORT=${TYPESENSE_PORT}
+      - TYPESENSE_API_KEY=${TYPESENSE_ADMIN_API_KEY}
     restart: "no"
     command: ["node", "check-index.js"]
 

@@ -13,8 +13,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "docker:start": "node start-docker.js",
-    "check-index": "node check-index.js"
+    "docker:start": "node docker-scripts/start-docker.js",
+    "check-index": "node docker-scripts/check-index.js"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",

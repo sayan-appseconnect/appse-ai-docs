@@ -4,7 +4,7 @@ console.log('🚀 Starting local Docker environment...');
 
 try {
   // 1. Build and start the stack in detached mode
-  execSync('docker-compose up --build -d', { stdio: 'inherit' });
+  execSync('docker-compose --env-file .env.local up --build -d', { stdio: 'inherit' });
 
   console.log('\n⏳ Waiting for the search scraper and verifier to finish (this may take a minute)...');
   
@@ -38,7 +38,7 @@ try {
   
   console.log('\n🛑 Tearing down localized stack due to build failure...');
   try {
-    execSync('docker-compose stop', { stdio: 'inherit' });
+    execSync('docker-compose --env-file .env.local stop', { stdio: 'inherit' });
   } catch (e) {
     // ignore
   }

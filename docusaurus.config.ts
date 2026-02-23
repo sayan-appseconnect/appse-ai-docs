@@ -83,12 +83,12 @@ const config: Config = {
       typesenseServerConfig: {
         nodes: [
           {
-            host: 'localhost', // Placeholder: Update with your real Typesense host
-            port: 8108,        // Placeholder: Update with your real Typesense port
-            protocol: 'http',  // Placeholder: Update with your real Typesense protocol
+            host: process.env.TYPESENSE_HOST,
+            port: process.env.TYPESENSE_PORT,
+            protocol: process.env.TYPESENSE_PROTOCOL,
           },
         ],
-        apiKey: 'xyz', // Placeholder: Update with your real Typesense search-only API key
+        apiKey: process.env.TYPESENSE_SEARCH_API_KEY,
       },
       typesenseSearchParameters: {},
       contextualSearch: true,
