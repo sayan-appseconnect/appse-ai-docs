@@ -15,13 +15,15 @@ To set up your WooCommerce credential, you can choose between two authentication
 1. **API Key Authentication**: Authentication is performed using the Consumer Key and Consumer Secret from WooCommerce (Recommended), provided as query parameters in API requests.
 2. **Basic Authentication**: Uses the Consumer Key and Consumer Secret generated from WooCommerce settings, passed as the Basic Auth username and password in API requests.
 
-<img src="/img/credentials/woocommerce/woocommerce_cred_form.png" alt="appse ai form page" width="700"/>
+<img src="/img/credentials/woocommerce/woocommerce_cred_form.png" alt="WooCommerce authentication type selection screen" width="700"/>
+
+> **Image**: This shows the authentication type selection screen. Select your preferred method below to continue.
 
 <Tabs>
 
 <TabItem value="API Key" label="API Key">
 
-## Method 1: API Key Authentication
+### Method 1: API Key Authentication
 
 Select **API Key Authentication** in the authentication type selection screen.
 
@@ -42,15 +44,15 @@ Before setting up your WooCommerce credential in appse ai, ensure the following:
 
 **Install WooCommerce Plugin**: If not already installed, you need to install and activate the WooCommerce plugin from the WordPress plugin repository.
 
-To install the woocommerce plugin and retrieve woocommerce credentials, follow the steps below:
+To install the WooCommerce plugin and retrieve WooCommerce credentials, follow the steps below:
 
-**1. Login to your WooCommerce Store**
+**1. Log in to your WooCommerce Store**
 
 Log in to your WordPress admin dashboard where WooCommerce is installed.
 
-**2. Install Woocommerce Plugin**
+**2. Install WooCommerce Plugin**
 
-Navigate to **Plugin** section in the left sidebar menu and search for **Woocommerce** you can see the required plugin, click to install and activate the plugin.
+Navigate to **Plugin** section in the left sidebar menu and search for **WooCommerce**, you can see the required plugin, click to install and activate the plugin.
 
 <img src="/img/credentials/woocommerce/select-woocommerce-plugin.png" alt="appse ai WooCommerce Dashboard" width="700"/>
 
@@ -58,7 +60,7 @@ Navigate to **Plugin** section in the left sidebar menu and search for **Woocomm
 
 Now, navigate to **WooCommerce** in the left sidebar menu and click on **Settings**.
 
-<img src="/img/credentials/woocommerce/settings.png" alt="Woocommerce settings menu" width="700"/>
+<img src="/img/credentials/woocommerce/settings.png" alt="WooCommerce settings menu" width="700"/>
 
 **4. Navigate to REST API Settings**
 
@@ -70,7 +72,7 @@ Click on the **Advanced** tab and then select **REST API**.
 
 On the REST API settings page, click on **Add key** button.
 
-<img src="/img/credentials/woocommerce/add_key.png" alt="Woocommerce add key" width="700"/>
+<img src="/img/credentials/woocommerce/add_key.png" alt="WooCommerce add key" width="700"/>
 
 **6. Configure API Permissions**
 
@@ -93,7 +95,7 @@ Once the API key is generated, copy the **Consumer Key** and **Consumer Secret**
 
 <img src="/img/credentials/woocommerce/client-key-secret.png" alt="Client Secret key" width="700"/>
 
-> `Note`: The Consumer Secret is shown only once. If you lose it, you will need to regenerate the API key.
+> **Note**: The Consumer Secret is shown only once. If you lose it, you will need to regenerate the API key.
 
 **8. Configure permalink**
 
@@ -122,7 +124,7 @@ Click **Save** to establish the connection.
 
 <TabItem value="Basic Auth" label="Basic Auth">
 
-## Method 2: Basic Authentication
+### Method 2: Basic Authentication
 
 Select **Basic Authentication** in the authentication type selection screen.
 
@@ -141,7 +143,7 @@ Select **Basic Authentication** in the authentication type selection screen.
 
 Basic Authentication allows you to connect using your WooCommerce Consumer Key and Consumer Secret as username and password.
 
-Follow the same steps as mentioned for API key authentication to generate and configure your credentials in WooCommerce.
+Refer to the **API Key tab** (Steps 1–8) to generate your Consumer Key and Consumer Secret, then return here and enter them in the fields above.
 
 </TabItem>
 
@@ -149,7 +151,7 @@ Follow the same steps as mentioned for API key authentication to generate and co
 
 ## Triggers
 
-Here is the list of available triggers in Woocommerce:
+Here is the list of available triggers in WooCommerce:
 
 - **New Customers Created** – Retrieves events when a new customer is created in WooCommerce.
 - **Customers Updated** – Retrieves events when an existing WooCommerce customer is updated.
@@ -160,16 +162,12 @@ Here is the list of available triggers in Woocommerce:
 
 ## Actions
 
-Here is the list of available actions in Woocommerce:
+Here is the list of available actions in WooCommerce product using product ID or SKU.
 
-- **Create Customer** – Add a new customer record to WooCommerce using the provided customer details.
-- **Update Customer** – Update an existing WooCommerce customer’s data by customer ID.
-- **Create Product** – Add a new product to WooCommerce with the specified product details.
-- **Update Product** – Update an existing WooCommerce product using product ID or SKU.
 - **Get Product by SKU** – Retrieve detailed product information from WooCommerce by SKU.
 - **Get Order Refund by Order ID** – Retrieve refund details for a specific WooCommerce order.
 - **Create Order Refund** – Create a refund for a WooCommerce order based on the order ID.
 
 ## Support
 
-Need help? Contact our support team at hello@appse.ai
+Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)
