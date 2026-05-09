@@ -222,8 +222,8 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Location Code * | Specify the location code to fetch item ledger entries. (e.g., `"BLUE"`) |
-| Limit * | Specify the maximum number of records to return. (e.g., `"1"`) |
+| Location Code | Specify the location code to fetch item ledger entries. (e.g., `"BLUE"`) |
+| Limit | Specify the maximum number of records to return. (e.g., `"1"`) |
 
 > **Note:** `Location Code` and `Limit` are mandatory fields.
 
@@ -319,7 +319,7 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Customer No * | Specify the customer number to fetch ship-to address details. (e.g., `"10000"`) |
+| Customer No | Specify the customer number to fetch ship-to address details. (e.g., `"10000"`) |
 
 > **Note:** `Customer No` is a mandatory field.
 
@@ -665,9 +665,9 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Customer No * | Specify the customer number. (e.g., `"10000"`) |
-| Ship-to Code * | Enter the unique ship-to code. (e.g., `"SHIP-201"`) |
-| Name * | Enter the ship-to address name. (e.g., `"SHIP-Address"`) |
+| Customer No | Specify the customer number. (e.g., `"10000"`) |
+| Ship-to Code | Enter the unique ship-to code. (e.g., `"SHIP-201"`) |
+| Name | Enter the ship-to address name. (e.g., `"SHIP-Address"`) |
 | Address | Primary address line. (e.g., `"Madhura Colony"`) |
 | Address 2 | Secondary address line. (e.g., `"D39, Doyen Township"`) |
 | City | City name. (e.g., `"Hyderabad"`) |
@@ -751,13 +751,13 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Journal Template Name * | Specify the journal template name. (e.g., `"ITEM"`) |
-| Journal Batch Name * | Specify the journal batch name. (e.g., `"DEFAULT"`) |
-| Entry Type * | Select the type of journal entry. (e.g., `"Positive Adjustment"`) |
-| Item No * | Specify the item number. (e.g., `"1012"`) |
-| Quantity * | Enter the quantity for the journal entry. (e.g., `"1500"`) |
+| Journal Template Name | Specify the journal template name. (e.g., `"ITEM"`) |
+| Journal Batch Name | Specify the journal batch name. (e.g., `"DEFAULT"`) |
+| Entry Type | Select the type of journal entry. (e.g., `"Positive Adjustment"`) |
+| Item No | Specify the item number. (e.g., `"1012"`) |
+| Quantity | Enter the quantity for the journal entry. (e.g., `"1500"`) |
 
-> **Note:** `Journal Template Name`, `Journal Batch Name`, `Entry Type`, `Item No`, and `Quantity` are mandatory. All other fields are optional and can be configured based on business requirements.
+> **Note:** `Journal Template Name`, `Journal Batch Name`, `Entry Type`, `Item No`, and `Quantity` are mandatory fields. All other fields are optional and can be configured based on business requirements.
 
 Click on **Continue**, then **Run** node.
 
@@ -851,7 +851,7 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Customer No * | Specify the customer number to update. (e.g., `"10000"`) |
+| Customer No | Specify the customer number to update. (e.g., `"10000"`) |
 | Customer Name | Enter the customer name. (e.g., `"Mercy Joe"`) |
 | Address | Primary address line. (e.g., `"ICP Awfis"`) |
 | Address 2 | Secondary address line. (e.g., `"Road. No.36, Jubille"`) |
@@ -864,7 +864,7 @@ Click on **Continue** button.
 | Salesperson Code | Specify the salesperson code. (e.g., `"BC"`) |
 | Blocked | Select the blocked status from available options: `All`, `Invoice`, `Ship`, or `None`. (e.g., `"None"`) |
 
-> **Note:** `Customer No` is mandatory. All other fields are optional and can be configured based on business requirements.
+> **Note:** `Customer No` is mandatory field. All other fields are optional and can be configured based on business requirements.
 
 Click on **Continue**, then **Run** node.
 
@@ -1042,9 +1042,9 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Shipment No * | Specify the posted sales shipment number. (e.g., `"102001"`) |
+| Shipment No | Specify the posted sales shipment number. (e.g., `"102001"`) |
 
-> **Note:** `Shipment No` is mandatory to enter.
+> **Note:** `Shipment No` is mandatory field.
 
 Click on **Continue**, then **Run** node.
 
@@ -1169,7 +1169,7 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Item No (Identifier) * | Specify the item number to update. (e.g., `"1012"`) |
+| Item No (Identifier) | Specify the item number to update. (e.g., `"1012"`) |
 | Description | Enter the item description. (e.g., `"Laptop - ThinkPad"`) |
 | Base Unit of Measure | Specify the base unit of measure. (e.g., `"PCS"`) |
 | Sales Unit of Measure | Specify the sales unit of measure. (e.g., `"PCS"`) |
@@ -1182,7 +1182,7 @@ Click on **Continue** button.
 | Blocked (True or False) | Set to `True` to block the item from transactions, otherwise `False`. Example: `False` |
 | Include Inventory (True or False) | Set to `True` to include the item in inventory calculations. Example: `True` |
 
-> **Note:** `Item No (Identifier)` is mandatory. All other fields are optional and can be configured based on business requirements.
+> **Note:** `Item No (Identifier)` is mandatory field. All other fields are optional and can be configured based on business requirements.
 
 Click on **Continue**, then **Run** node.
 
@@ -1403,13 +1403,14 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Object Name * | Select the Business Central object/entity to search records from using the searchable dropdown. Example objects include: `Item`, `SalesQuote`, `SalesOrder`, `Customers`, `Shipments`, `PostedSalesShipment`, `SalesPrices`, `ShipToAddress`, `ItemLedgerEntries`, and `Contacts`. |
-| Filter Value * | Enter the filter condition to retrieve matching records. Example: `No eq '1012'` |
-| Limit of records * | Define the maximum number of records to fetch. Example: `10` |
-| Select fields to fetch | Specify the fields to retrieve from the object. Example: `No, Description` |
+| Field | Description |
+|------|-------------|
+| Object Name | Select the Business Central object/entity to search records from using the searchable dropdown. Supported objects include: `Posted Sales Shipment`, `Posted Sales Shipment Lines`, `Sales Prices`, `ShipToAddress`, `Items`, `Customers`, `Sales Quote`, `Sales Lines`, `Item Ledger Entries`, `Contacts`, `Sales Order`, `Shipments`, `Item Journal`, `Item variants`, `Customer ledger Entries`, `Posted Sales Invoice`, `Sales Order Archives Lines`, `Sales Invoice`, `Sales Invoice Lines`, and `Cash Receipt Journals`. |
+| Filter Value | Enter the filter condition to retrieve matching records. Example: `No eq '1012'` |
+| Limit of records | Define the maximum number of records to fetch. Example: `10` |
+| Select fields to fetch | Specify the fields to retrieve from the selected object as comma-separated values. Example: `id,number,displayName` |
 
-> **Note:** `Object Name`, `Filter Value`, and `Limit of records` are mandatory.  
-> The available object names in the dropdown may vary depending on the connected Business Central environment and configuration.
+> **Note:** `Object Name`, `Filter Value`, and `Limit of records` are mandatory fields. All other fields are optional and can be configured based on business requirements.
 
 Click on **Continue**, then **Run** node.
 
@@ -1454,7 +1455,7 @@ Click on **Continue** button.
 
 | Field | Description |
 |------|-------------|
-| Sales Order No * | Specify the sales order number to update. (e.g., `"101013"`) |
+| Sales Order No | Specify the sales order number to update. (e.g., `"101013"`) |
 | Shipment Date | Enter the shipment date. (e.g., `"2026-05-08"`) |
 | Requested Delivery Date | Enter the requested delivery date. (e.g., `"2026-05-18"`) |
 | Salesperson Code | Specify the salesperson code. (e.g., `"BC"`) |
@@ -1468,7 +1469,7 @@ Click on **Continue** button.
 | Sell-to Country / Region Code | Specify the sell-to country or region code. (e.g., `"IN"`) |
 | Shortcut Dimension 2 Code | Specify the shortcut dimension 2 code. (e.g., `"SMALL"`) |
 
-> **Note:** `Sales Order No` is mandatory. All other fields are optional and can be configured based on business requirements.
+> **Note:** `Sales Order No` is mandatory field. All other fields are optional and can be configured based on business requirements.
 
 Click on **Continue**, then **Run** node.
 
