@@ -179,5 +179,7 @@ Here is the list of available actions for Square POS:
 Ensure your Square OAuth scopes include the permissions required for each action or trigger you use. If a workflow fails with an authorization error, add the corresponding scope in the Square Developer Dashboard and in the **OAuth Scopes** field on your appse ai credential.
 
 ---
+
 ## Support
-Need help? Contact our support team at hello@appse.ai
+
+Need help? Contact the support team at [hello@appse.ai](mailto:hello@appse.ai)
