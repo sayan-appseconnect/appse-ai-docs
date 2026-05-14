@@ -1,6 +1,7 @@
 ---
 title: "Mailchimp"
 slug: /app-integrations/mailchimp/
+description: Step-by-step guide to set up Mailchimp credentials and automate audience, contact, and campaign workflows in appse ai.
 ---
 
 Mailchimp is a leading email marketing and audience management platform that helps businesses automate campaigns, manage contacts, and track customer engagement. With appse ai, you can seamlessly connect Mailchimp to automate audience synchronization, contact management, tagging operations, and campaign workflows.
@@ -9,7 +10,7 @@ Mailchimp is a leading email marketing and audience management platform that hel
 
 To set up your Mailchimp credential, you need to generate an API Key from your Mailchimp account and configure the associated Data Center.
 
-## Required Fields
+### Required Fields
 
 | Field           | Description                                                            |
 | ----------------| ---------------------------------------------------------------------- |
@@ -19,11 +20,11 @@ To set up your Mailchimp credential, you need to generate an API Key from your M
 
 <img src="/img/credentials/mailchimp/mailchimp-credential-popup.png" alt="Mailchimp Credential Form" width="700" height="500"/>
 
-## Step-by-Step Guide
+### Step-by-Step Guide
 
 Before setting up your Mailchimp credential in appse ai, ensure that you have access to your Mailchimp account with permission to generate API keys.
 
-### 1. Log in to Mailchimp
+#### 1. Log in to Mailchimp
 
 Log in to your Mailchimp account.
 
@@ -31,7 +32,7 @@ Log in to your Mailchimp account.
 
 ---
 
-### 2. Navigate to API Key settings
+#### 2. Navigate to API Key settings
 
 - Click on your profile icon in the bottom-left corner and navigate to:
 
@@ -51,31 +52,31 @@ Log in to your Mailchimp account.
 
 ---
 
-### 3. Generate API Key
+#### 3. Generate API Key
 
 In the API Keys section:
 
 - Click **Create A Key**
 
-<img src="/img/credentials/mailchimp/mailchimp-create-apikey.png" alt="Click Mailchimp API Key" width="700"/>
+<img src="/img/credentials/mailchimp/mailchimp-create-apikey.png" alt="Mailchimp Create A Key button" width="700"/>
 
 - Provide **API Key Name**
 
-<img src="/img/credentials/mailchimp/mailchimp-apikey-name.png" alt="Click Mailchimp API Key Name" width="700"/>
+<img src="/img/credentials/mailchimp/mailchimp-apikey-name.png" alt="Mailchimp API Key Name" width="700"/>
 
 - Click on **Generate Key**
 
-<img src="/img/credentials/mailchimp/mailchimp-click-generate-key.png" alt="Click Mailchimp API Key" width="700"/>
+<img src="/img/credentials/mailchimp/mailchimp-click-generate-key.png" alt="Mailchimp Generate Key button" width="700"/>
 
 - Copy the generated API key
 
-<img src="/img/credentials/mailchimp/mailchimp-copy-apikey.png" alt="Click Mailchimp API Key" width="700"/>
+<img src="/img/credentials/mailchimp/mailchimp-copy-apikey.png" alt="Mailchimp copy API key screen" width="700"/>
 
 > **Note**: Store the API key securely. It provides access to your Mailchimp account APIs.
 
 ---
 
-### 4. Find Data Center
+#### 4. Find Data Center
 
 Your Mailchimp Data Center can be identified from either the account URL or the API key format.
 
@@ -95,7 +96,7 @@ xxxxxxxxxxxxxxxx-us21
 
 ---
 
-### 5. Connect to appse ai
+#### 5. Connect to appse ai
 
 In appse ai, enter the following details:
 
@@ -113,13 +114,11 @@ In appse ai, enter the following details:
 
 Here is the list of available actions in Mailchimp:
 
-| Action                           | Description                                                         |
-| -------------------------------- | ------------------------------------------------------------------- |
-| **Create contact**      | Add or Remove a new contact to a Mailchimp audience.                          |
-| **Add or Remove Contact Tags**          | Add tags to an existing Mailchimp contact.                          |
+| Action                         | Description                                                      |
+| ------------------------------ | ---------------------------------------------------------------- |
+| **Create Contact**             | Add a new contact to a Mailchimp audience.                       |
+| **Add or Remove Contact Tags** | Add or remove tags on an existing Mailchimp contact.          |
 
 ## Support
 
 Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)
-
----
