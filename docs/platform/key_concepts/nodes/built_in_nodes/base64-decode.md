@@ -15,7 +15,7 @@ The Base64 Decode node in appse ai is a built-in node that allows you to convert
 <img src="/img/platform/key-concepts/nodes/built-in/base64-decode/selection-screen.png" alt="Base64 Decode node selection screen" width="700"/>
 
 2. Connect it with a node that provides a Base64 string output.
-<img src="/img/platform/key-concepts/nodes/built-in/base64-decode/select-a-desired-node.png" alt="Connecting Base64 Decode node to source node" width="700"/>
+<img  src="/img/platform/key-concepts/nodes/built-in/base64-decode/select-a-desired-node.png" alt="Connecting Base64 Decode node to source node" width="700"/>
 
 ## Configuration
 
