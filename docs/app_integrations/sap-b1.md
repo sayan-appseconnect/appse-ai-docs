@@ -1,6 +1,7 @@
 ﻿---
 title: "SAP Business One"
 slug : /app-integrations/sap-b1
+description: Step-by-step guide to set up SAP Business One credentials and automate business workflows in appse ai.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -40,10 +41,10 @@ Provide a name for your credential in the `Connection Name` field. This will be 
    - You should see page titled - `System Landscape Directory`
 
 - Login to the platform using your **System Landscape Directory Credentials**.
-<img src="/img/credentials/sap-b1/sap-b1-cred-sld-login.png" alt="SAP B1 Step-by-Step Guide screenshot" />
+<img src="/img/credentials/sap-b1/sap-b1-cred-sld-login.png" alt="SAP B1 Step-by-Step Guide step 1 of 5 screenshot" />
 
 - Locate the base URL used to access the Service Layer API. Go to _Services_ -> _Service Layer_
-<img src="/img/credentials/sap-b1/sap-b1-cred-host-url.png" alt="SAP B1 Step-by-Step Guide screenshot" />
+<img src="/img/credentials/sap-b1/sap-b1-cred-host-url.png" alt="SAP B1 Step-by-Step Guide step 2 of 5 screenshot" />
 
 - Add your Host URL and Port. With respect to the image you will be adding:
 > - **Host URL**: `https://10.0.2.68`
@@ -53,16 +54,16 @@ Provide a name for your credential in the `Connection Name` field. This will be 
 
 - In the same **System Landscape Directory**
 - Go to _DB Instances and Companies_ -> Click on Your Server Name
-<img src="/img/credentials/sap-b1/sap-b1-cred-db-name.png" alt="SAP B1 Step-by-Step Guide screenshot" />
+<img src="/img/credentials/sap-b1/sap-b1-cred-db-name.png" alt="SAP B1 Step-by-Step Guide step 3 of 5 screenshot" />
 
 Copy the **Schema Name**, this is your `Database Name`
 
-<img src="/img/credentials/sap-b1/sap-b1-cred-db-name2.png" alt="SAP B1 Step-by-Step Guide screenshot" />
+<img src="/img/credentials/sap-b1/sap-b1-cred-db-name2.png" alt="SAP B1 Step-by-Step Guide step 4 of 5 screenshot" />
 
 > **Note**: Depending on your setup, you might see `https://insync.pro` instead of `https://10.0.2.68`. Either can be used as your Host URL input.
 
 #### 4. Get Your Username and Password
-<img src="/img/credentials/sap-b1/sap-b1-credentials.png" alt="SAP B1 Step-by-Step Guide screenshot" width="602" height="306" />
+<img src="/img/credentials/sap-b1/sap-b1-credentials.png" alt="SAP B1 Step-by-Step Guide step 5 of 5 screenshot" width="602" height="306" />
 
 - Use your **SAP B1 client login credentials**.
 - Make sure the user has sufficient API permissions for integration.
@@ -71,12 +72,12 @@ Copy the **Schema Name**, this is your `Database Name`
 
 Go to Credentials Page and Click on **Select App**.
 
-<img src="/img/credentials/sap-b1/Portal-AppSelect.jpg" width="700"  alt="SAP B1 Setup Credentials in Portal screenshot" />
+<img src="/img/credentials/sap-b1/Portal-AppSelect.jpg" width="700"  alt="SAP B1 Setup Credentials in Portal step 1 of 3 screenshot" />
 
 Configure the **Credentials** as mentioned above
 
-<img src="/img/credentials/sap-b1/Portal-CredsConfig.jpg" width="700"  alt="SAP B1 Setup Credentials in Portal screenshot" />
-<img src="/img/credentials/sap-b1/Portal-CredConfig2.png" width="700"  alt="SAP B1 Setup Credentials in Portal screenshot" />
+<img src="/img/credentials/sap-b1/Portal-CredsConfig.jpg" width="700"  alt="SAP B1 Setup Credentials in Portal step 2 of 3 screenshot" />
+<img src="/img/credentials/sap-b1/Portal-CredConfig2.png" width="700"  alt="SAP B1 Setup Credentials in Portal step 3 of 3 screenshot" />
 
 ### Save Your Credential
 
@@ -113,7 +114,7 @@ Use these links to open the matching trigger directly in the Trigger tab:
 - [New Activities Created](?sap-b1-section=triggers#new-activities-created)
 
 
-### New Items Created
+#### New Items Created
 
 **New Item Created** trigger starts the workflow automatically when a new item is created in SAP Business One.
 It captures the item details and passes them to the next step for further processing.
@@ -124,13 +125,13 @@ It captures the item details and passes them to the next step for further proces
 
 #### Select Credentials and Trigger Event
 
-  <img src="/img/credentials/sap-b1/NWITMCRTD1.jpg" width="700"  alt="SAP B1 New Items Created screenshot" />
+  <img src="/img/credentials/sap-b1/NWITMCRTD1.jpg" width="700"  alt="SAP B1 New Items Created step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ----------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -141,11 +142,11 @@ Click on **Continue** button, then **Run** the node.
 
 ----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/TriggerConfiguration.jpg" width="700"  alt="SAP B1 New Items Created screenshot" />
+<img src="/img/credentials/sap-b1/TriggerConfiguration.jpg" width="700"  alt="SAP B1 New Items Created step 2 of 2 screenshot" />
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -160,7 +161,7 @@ Click on **Continue** button, then **Run** the node.
 ```
 -------
 
-### Items Updated
+#### Items Updated
 
 **Items Updated Trigger** initiates a workflow whenever existing item details are modified in the SAP Business One. It captures the updated item information and passes it as structured data.
 
@@ -173,9 +174,9 @@ Click on **Continue** button, then **Run** the node.
 
   <img src="/img/credentials/sap-b1/ITMUPDTD2.jpg" width="700"  alt="SAP B1 Items Updated screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -186,11 +187,11 @@ Click on **Continue** button, then **Run** the node.
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -241,7 +242,7 @@ Click on **Continue** button, then **Run** the node.
 
 ------
 
-### New Order Created
+#### New Order Created
 
 **New Order Created Trigger** initiates a workflow whenever a new order is successfully created in the SAP Business One. It automatically captures order details and passes them as structured data to subsequent steps in the workflow.    
 
@@ -253,10 +254,10 @@ Click on **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/NWORDRCRTD3.jpg" width="700"  alt="SAP B1 New Order Created screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -267,12 +268,12 @@ Click on **Continue** button, then **Run** the node.
 
 --------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -289,7 +290,7 @@ Click on **Continue** button, then **Run** the node.
   }
 ]
 ```
-### New Quotation Created
+#### New Quotation Created
 
 **New Quotation Created Trigger** initiates a workflow whenever a new quotation is generated in the SAP Business One. It captures quotation details and passes them as structured data to subsequent steps in the workflow.
 
@@ -301,10 +302,10 @@ Click on **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/NWQTONCRTD4.jpg" width="700"  alt="SAP B1 New Quotation Created screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -315,11 +316,11 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -340,7 +341,7 @@ Click on **Continue** button, then **Run** the node.
 ```
 -------
 
-### New Business Partner Created
+#### New Business Partner Created
 
 **New Business Partner Created Trigger** initiates a workflow whenever a new business partner is added to the SAP Business One. It captures partner details and passes them as structured data to subsequent workflow steps.
 
@@ -352,10 +353,10 @@ Click on **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/NWBPCRTD5.jpg" width="700"  alt="SAP B1 New Business Partner Created screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -366,12 +367,12 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -384,7 +385,7 @@ Click on **Continue** button, then **Run** the node.
 ]
 ```
 
-### Business Partners Updated
+#### Business Partners Updated
 
 **Business Partners Updated Trigger** initiates a workflow whenever existing business partner details are modified in the SAP Business One. It captures the updated information and passes it as structured data to subsequent workflow steps.
 
@@ -397,10 +398,10 @@ Click on **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/BPUPDTD6.jpg" width="700" alt="SAP B1 Business Partners Updated screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -411,12 +412,12 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
 
-#### Result
+##### Result
 
 ```json
 [
@@ -432,7 +433,7 @@ Click on **Continue** button, then **Run** the node.
 
 --------
 
-### New AR Invoices Created
+#### New AR Invoices Created
 
 **New AR Invoices Created Trigger** initiates a workflow whenever a new Accounts Receivable (AR) invoice is created in the SAP Business One. It captures invoice details and passes them as structured data to subsequent workflow steps.
 
@@ -444,10 +445,10 @@ Click on **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/NWARINVCCRTD7.jpg" width="700"  alt="SAP B1 New AR Invoices Created screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -459,12 +460,12 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -479,7 +480,7 @@ Click on **Continue** button, then **Run** the node.
 
 -------
 
-### New Credit Note Created
+#### New Credit Note Created
 
 **New Credit Note Created Trigger** initiates a workflow whenever a new credit note is generated in the SAP Business One. It captures credit note details and passes them as structured data to subsequent workflow steps.
 
@@ -491,10 +492,10 @@ Click on **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/NWCRDTNTCRTD8.jpg" width="700"  alt="SAP B1 New Credit Note Created screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -505,12 +506,12 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -525,7 +526,7 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-### New Delivery Notes Created
+#### New Delivery Notes Created
 
 **New Delivery Notes Created Trigger** initiates a workflow whenever a new delivery note is created in the SAP Business One. It captures delivery details and passes them as structured data to subsequent workflow steps.
 
@@ -537,10 +538,10 @@ Click on **Continue** button, then **Run** the node.
 
   <img src="/img/credentials/sap-b1/NWDLVRYNTCRTD9.jpg" width="700"  alt="SAP B1 New Delivery Notes Created screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -551,12 +552,12 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -576,7 +577,7 @@ Click on **Continue** button, then **Run** the node.
 
 --------
 
-### New Incoming Payments Created
+#### New Incoming Payments Created
 
 **New Incoming Payments Created Trigger** initiates a workflow whenever a new incoming payment is recorded in the SAP Business One. It captures payment details and passes them as structured data to subsequent workflow steps.
 
@@ -588,10 +589,10 @@ Click on **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/NWINCMGPMNTSCRTD10.jpg" width="700"  alt="SAP B1 New Incoming Payments Created screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -602,12 +603,12 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -622,7 +623,7 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-### New Service Calls Created
+#### New Service Calls Created
 
 **New Service Calls Created Trigger** initiates a workflow whenever a new service call is logged in the SAP Business One. It captures service request details and passes them as structured data to subsequent workflow steps.
 
@@ -634,10 +635,10 @@ Click on **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/NWSRVCCLSCRTD11.jpg" width="700"  alt="SAP B1 New Service Calls Created screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -648,12 +649,12 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -668,7 +669,7 @@ Click on **Continue** button, then **Run** the node.
 
 --------------
 
-### New Returns Created
+#### New Returns Created
 
 **New Returns Created Trigger** initiates a workflow whenever a new return request is created in the SAP Business One. It captures return details and passes them as structured data to subsequent workflow steps.
 
@@ -680,10 +681,10 @@ Click on **Continue** button, then **Run** the node.
 
   <img src="/img/credentials/sap-b1/NWRTNSCRTD12.jpg" width="700"  alt="SAP B1 New Returns Created screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -694,12 +695,12 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -719,7 +720,7 @@ Click on **Continue** button, then **Run** the node.
 
 ---------------
 
-### New Activities Created
+#### New Activities Created
 
 **New Activities Created Trigger** initiates a workflow whenever a new activity is logged in the SAP Business One. It captures activity details and passes them as structured data to subsequent workflow steps.
 
@@ -731,10 +732,10 @@ Click on **Continue** button, then **Run** the node.
 
    <img src="/img/credentials/sap-b1/NWACTVTCRTD13.jpg" width="700"  alt="SAP B1 New Activities Created screenshot" />
 
-Click on the **Continue** button..
+Click on the **Continue** button.
 
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -745,12 +746,12 @@ Click on **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
 **Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."
 
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -792,7 +793,7 @@ Use these links to open the matching action section directly in the Action tab:
 - [Purchase Order Action](?sap-b1-section=actions#purchase-order-action)
 - [Incoming Payments Action](?sap-b1-section=actions#incoming-payments-action)
 - [Delivery Note Actions](?sap-b1-section=actions#delivery-note-actions)
-- [DownPayment Actions](?sap-b1-section=actions#downpayment-actions)
+- [DownPayment Actions](?sap-b1-section=actions#downpayments-actions)
 - [SalesForecast Action](?sap-b1-section=actions#salesforecast-action)
 - [PaymentDraft Actions](?sap-b1-section=actions#paymentdraft-actions)
 - [Blanket Agreements Actions](?sap-b1-section=actions#blanket-agreements-actions)
@@ -801,9 +802,9 @@ Use these links to open the matching action section directly in the Action tab:
 - [Customer Equipment Card Actions](?sap-b1-section=actions#customer-equipment-card-actions)
 
 ----
-## BusinessPartners Actions
+### BusinessPartners Actions
 
-### Get a BusinessPartner by EmailAddress
+#### Get a BusinessPartner by EmailAddress
 
 **Get a Business Partner by Email Address** action retrieves the details of a business partner using their email address as the search criteria. It returns the matching record as a structured object.
 
@@ -813,14 +814,14 @@ This action is commonly used to **lookup partner information**, **validate exist
 
 -------
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GBPbyEM44.jpg" width="700"  alt="SAP B1 Get a BusinessPartner by EmailAddress screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GBPbyEM44.jpg" width="700"  alt="SAP B1 Get a BusinessPartner by EmailAddress step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -828,13 +829,13 @@ Click on the **Continue** button.
 
 Click on the **Continue** button, then **Run** the node.
 
-#### Example Configuration
+##### Example Configuration
 
-   <img src="/img/credentials/sap-b1/SAP-AC-GETBPbyEmail14.jpg" width="700"  alt="SAP B1 Get a BusinessPartner by EmailAddress screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-GETBPbyEmail14.jpg" width="700"  alt="SAP B1 Get a BusinessPartner by EmailAddress step 2 of 2 screenshot" />
 
 -------------
 
-#### Result
+##### Result
 ```json
 {
   "CardCode": "165120",
@@ -873,7 +874,7 @@ Click on the **Continue** button, then **Run** the node.
 ```
 ----------------
 
-### Get CardCode by ContactEmployee email
+#### Get CardCode by ContactEmployee email
 
 **Get a Business Partner by Email Address** action retrieves the details of a business partner using their email address as the search criteria. It returns the matching record as a structured object.
 
@@ -883,14 +884,14 @@ This action is commonly used to **lookup partner information**, **validate exist
 
 ------
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GCCbyCEmp45.jpg" width="700"  alt="SAP B1 Get CardCode by ContactEmployee email screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GCCbyCEmp45.jpg" width="700"  alt="SAP B1 Get CardCode by ContactEmployee email step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ----------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -900,12 +901,12 @@ Click on the **Continue** button, then **Run** the node.
 
 -------
 
-#### Example Configuration
-   <img src="/img/credentials/sap-b1/SAP-AC-GET-CC-by-CE-email16.jpg" width="700"  alt="SAP B1 Get CardCode by ContactEmployee email screenshot" />
+##### Example Configuration
+   <img src="/img/credentials/sap-b1/SAP-AC-GET-CC-by-CE-email16.jpg" width="700"  alt="SAP B1 Get CardCode by ContactEmployee email step 2 of 2 screenshot" />
 
 -----------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -950,7 +951,7 @@ Click on the **Continue** button, then **Run** the node.
 
 -----------
 
-### Create New BusinessPartner
+#### Create New Business Partner
 
 **Create New Business Partner with CardCode** action creates a new business partner in the SAP using a unique CardCode. It allows you to configure mandatory and optional details, which are then stored and passed as structured data for further workflow steps.
 This action is commonly used to **onboard new customers or vendors**, **store contact and address information**.
@@ -959,36 +960,46 @@ This action is commonly used to **onboard new customers or vendors**, **store co
 
 --------------------
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CNBP46.jpg" width="700"  alt="SAP B1 Create New BusinessPartner screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CNBP46.jpg" width="700"  alt="SAP B1 Create New BusinessPartner step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
 -------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
 | CardCode | Enter a unique identifier for the business partner (e.g., "STOP002"). |
 
-#### Optional Fields
-| Customer Details
-Customer Name | Enter Required Customer Name (e.g., "Config") |
-| Phone1 | Enter Required Phone Number (e.g., "9987654321") |
-| Email Address | Enter Required Mobile Number (e.g., "config.co@yopmail.com")|
-| BP Addresses
-Address Name | Enter Address Name (e.g., "ADD 12345" )|
+##### Optional Fields
+###### Customer Details
+
+| Field | Description |
+|---|---|
+| Customer Name | Enter required customer name (e.g., "Config") |
+| Phone1 | Enter required phone number (e.g., "9987654321") |
+| Email Address | Enter required mobile number (e.g., "config.co@yopmail.com") |
+
+###### BP Addresses
+
+| Field | Description |
+|---|---|
+| Address Name | Enter address name (e.g., "ADD 12345") |
 | Address Type | Select either **Ship To** or **Bill To** (e.g., "ShipTo") |
-| Optional Address Fields  
-Street  | Enter Street Name (e.g., "Madhura Nagar") |
-| Block or Sector | Block (e.g., "B70 TLR Residency") |
-| Zip Code  | Zip Code (e.g., "500038") |
-| City | City (e.g.,"Hyderabad") |  
-| Country | Country (e.g., "India") | 
-| State | State (e.g., "Telangana") |
-| Contact Employees
-Name | Enter contact employee name (e.g., "Check 0110") |
+| Street | Enter street name (e.g., "Madhura Nagar") |
+| Block or Sector | Enter block or sector (e.g., "B70 TLR Residency") |
+| Zip Code | Enter zip code (e.g., "500038") |
+| City | Enter city (e.g., "Hyderabad") |
+| Country | Enter country (e.g., "India") |
+| State | Enter state (e.g., "Telangana") |
+
+###### Contact Employees
+
+| Field | Description |
+|---|---|
+| Name | Enter contact employee name (e.g., "Check 0110") |
 | First Name | Enter first name (e.g., "Demo") |
 | Last Name | Enter last name (e.g., "Customer") |
 | Phone1 | Enter phone number if required. |
@@ -1000,16 +1011,16 @@ Click on the **Continue** button, then **Run** the node.
 
 -----------------
 
-#### Configuration
+##### Configuration Fields
 
-   <img src="/img/credentials/sap-b1/SAP-AC-CNBPD19.jpg" width="700"  alt="SAP B1 Create New BusinessPartner screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-NBPD20.jpg" width="700"  alt="SAP B1 Create New BusinessPartner screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-NBPD21.jpg" width="700"  alt="SAP B1 Create New BusinessPartner screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-NBPD22.jpg" width="700"  alt="SAP B1 Create New BusinessPartner screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-CNBPD19.jpg" width="700"  alt="SAP B1 Create New BusinessPartner step 2 of 5 screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NBPD20.jpg" width="700"  alt="SAP B1 Create New BusinessPartner step 3 of 5 screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NBPD21.jpg" width="700"  alt="SAP B1 Create New BusinessPartner step 4 of 5 screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NBPD22.jpg" width="700"  alt="SAP B1 Create New BusinessPartner step 5 of 5 screenshot" />
 
 -----------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1043,29 +1054,27 @@ Click on the **Continue** button, then **Run** the node.
 
 -----------------
 
-### Create a New Business Partner Without CardCode
+#### Create a New Business Partner Without CardCode
 
 **Create New Business Partner (Without CardCode)** action creates a new business partner in the SAP without requiring a CardCode. The SAP automatically generates a unique CardCode upon successful creation.
 
 > **Note:** The CardCode is auto-generated by the system. Optional fields can be configured as needed, and leaving them empty will not prevent the creation of the business partner.
 
-#### Select the Credential and Action Event
-   <img src="/img/credentials/sap-b1/SAP-C-CNBWOUTCC24.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode screenshot" />
+##### Select the Credential and Action Event
+   <img src="/img/credentials/sap-b1/SAP-C-CNBWOUTCC24.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
-#### Configuration Fields
+##### Configuration Fields
 
-#### 1. Customer Name
+##### 1. Customer Name
 
 | Field          | Description |
 |---------------|------------|
 | Customer Name | Enter required customer name (e.g., "WilliamRober") |
-| Optional Field
-Phone1 | Enter required phone number (e.g., "8909876545") |
+| Phone1 | Enter required phone number (e.g., "8909876545") |
 | Email Address | Enter required email address (e.g., "william.rober333@yopmail.com") |
-| BP Addresses
-Address Name | Enter address name (e.g., "ADD 12346") |
+| Address Name | Enter address name (e.g., "ADD 12346") |
 | Address Type | Select either **Ship To** or **Bill To** (e.g., "ShipTo") |
 | Street | Enter street name (e.g., "Madhura Nagar") |
 | Block or Sector | Enter block or sector (e.g., "B70 TLR Residency") |
@@ -1073,8 +1082,7 @@ Address Name | Enter address name (e.g., "ADD 12346") |
 | City | Enter city (e.g., "Hyderabad") |
 | Country | Enter country (e.g., "India") |
 | State | Enter state (e.g., "Telangana") |
-| Contact Employees
-Name | Enter contact employee name (e.g., "Check 0111") |
+| Name | Enter contact employee name (e.g., "Check 0111") |
 | First Name | Enter first name (e.g., "Demo") |
 | Last Name | Enter last name (e.g., "Customer") |
 | Phone1 | Enter phone number if required (e.g., "9987654322") |
@@ -1086,16 +1094,16 @@ Click on the **Continue** button, then **Run** the node.
 
 ---------------
 
-#### Configuration
+##### Configuration Fields
 
-   <img src="/img/credentials/sap-b1/SAP-AC-CNBPWOUTCC25.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-CNBPWOUTCC26.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-CNBPWOUTCC27.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-NBPWOUTCC28.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode screenshot" />
+  <img src="/img/credentials/sap-b1/SAP-AC-CNBPWOUTCC25.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode step 2 of 5 screenshot" />
+  <img src="/img/credentials/sap-b1/SAP-AC-CNBPWOUTCC26.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode step 3 of 5 screenshot" />
+  <img src="/img/credentials/sap-b1/SAP-AC-CNBPWOUTCC27.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode step 4 of 5 screenshot" />
+  <img src="/img/credentials/sap-b1/SAP-AC-NBPWOUTCC28.jpg" width="700"  alt="SAP B1 Create a New Business Partner Without CardCode step 5 of 5 screenshot" />
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1109,7 +1117,7 @@ Click on the **Continue** button, then **Run** the node.
 
 -----------------
 
-### Update a businesspartner
+#### Update a Business Partner
 
 **Update Business Partner** action modifies the details of an existing business partner in the SAP. It allows updating specific fields while retaining unchanged information.
 
@@ -1117,14 +1125,14 @@ This action is commonly used to **maintain accurate partner records**, **update 
 
 > **Note:** Only the fields provided in the configuration will be updated. Fields left empty will remain unchanged in the existing business partner record.
 
-#### Select the Credential and Action Event
-   <img src="/img/credentials/sap-b1/SAP-C-UBP29.jpg" width="700"  alt="SAP B1 Update a businesspartner screenshot" />
+##### Select the Credential and Action Event
+   <img src="/img/credentials/sap-b1/SAP-C-UBP29.jpg" width="700"  alt="SAP B1 Update a businesspartner step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
 -----------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -1132,8 +1140,7 @@ Click on the **Continue** button.
 | Customer Name | Enter required customer name (e.g., "Robbin Martin") |
 | Phone1 | Enter required phone number (e.g., "9879090907") |
 | Email Address | Enter required email address (e.g., "config.co@yopmail.com") |
-| BP Addresses
-Address Name | Enter address name (e.g., "ADD 12345") |
+| Address Name | Enter address name (e.g., "ADD 12345") |
 | Address Type | Select either **Ship To** or **Bill To** (e.g., "ShipTo") |
 | Street | Enter street name (e.g., "Madhura Nagar") |
 | Block or Sector | Enter block or sector (e.g., "B70 TLR Residency") |
@@ -1141,8 +1148,7 @@ Address Name | Enter address name (e.g., "ADD 12345") |
 | City | Enter city (e.g., "Hyderabad") |
 | Country | Enter country (e.g., "India") |
 | State | Enter state (e.g., "Telangana") |
-| Contact Employees
-Name | Enter contact employee name (e.g., "Check 0110") |
+| Name | Enter contact employee name (e.g., "Check 0110") |
 | First Name | Enter first name (e.g., "Demo") |
 | Last Name | Enter last name (e.g., "Customer") |
 | Phone1 | Enter phone number if required (e.g., "9987654322") |
@@ -1154,16 +1160,16 @@ Click on the **Continue** button, then **Run** the node.
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
-   <img src="/img/credentials/sap-b1/SAP-AC-UBP30.jpg" width="700"  alt="SAP B1 Update a businesspartner screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-UBP31.jpg" width="700"  alt="SAP B1 Update a businesspartner screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-UBP32.jpg" width="700"  alt="SAP B1 Update a businesspartner screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-UBP33.jpg" width="700"  alt="SAP B1 Update a businesspartner screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-UBP30.jpg" width="700"  alt="SAP B1 Update a businesspartner step 2 of 5 screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-UBP31.jpg" width="700"  alt="SAP B1 Update a businesspartner step 3 of 5 screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-UBP32.jpg" width="700"  alt="SAP B1 Update a businesspartner step 4 of 5 screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-UBP33.jpg" width="700"  alt="SAP B1 Update a businesspartner step 5 of 5 screenshot" />
 
 -----------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1176,9 +1182,9 @@ Click on the **Continue** button, then **Run** the node.
 ---------
 
 
-## Items Actions
+### Items Actions
 
-### Get a Item by ItemCode
+#### Get a Item by ItemCode
 
 **Get an Item by ItemCode** action retrieves the details of an item using its unique ItemCode. It returns the matching item record as a structured object.
 
@@ -1186,14 +1192,14 @@ This action is commonly used to **lookup item information**, **validate product 
 
 > **Note:** If the provided ItemCode does not exist, the output will be empty or null.
 
-#### Select the Credential and Action Event
-   <img src="/img/credentials/sap-b1/SAP-C-GIC35.jpg" width="700"  alt="SAP B1 Get a Item by ItemCode screenshot" />
+##### Select the Credential and Action Event
+   <img src="/img/credentials/sap-b1/SAP-C-GIC35.jpg" width="700"  alt="SAP B1 Get a Item by ItemCode step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 --------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -1201,13 +1207,13 @@ Click on the **Continue** button.
 
 Click on the **Continue** button, then **Run** the node.
 
-#### Example Configuration
+##### Example Configuration
 
-   <img src="/img/credentials/sap-b1/SAP-AC-GIC36.jpg" width="700"  alt="SAP B1 Get a Item by ItemCode screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-GIC36.jpg" width="700"  alt="SAP B1 Get a Item by ItemCode step 2 of 2 screenshot" />
 
 ----------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1222,7 +1228,7 @@ Click on the **Continue** button, then **Run** the node.
 
 -------------
 
-### Create a New Item {#create-a-new-item}
+#### Create a New Item {#create-a-new-item}
 
 **Create New Item** action creates a new item in the SAP with the specified details. It captures item information and stores it as a structured record for use in workflows and inventory processes.
 
@@ -1230,14 +1236,14 @@ This action is commonly used to **add new products**, **manage inventory**.
 
 > **Note:** If ItemCode is not provided, SAP may not generate Item. Optional fields can be configured as needed without blocking item creation.
 
-#### Select the Credential and Action Event
-   <img src="/img/credentials/sap-b1/SAP-C-CNI38.jpg" width="700"  alt="SAP B1 Create a New Item screenshot" />
+##### Select the Credential and Action Event
+   <img src="/img/credentials/sap-b1/SAP-C-CNI38.jpg" width="700"  alt="SAP B1 Create a New Item step 1 of 6 screenshot" />
 
 Click on the **Continue** button.
 
 ----------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -1267,15 +1273,15 @@ Click on the **Continue** button.
 
 Click on the **Continue** button, then **Run** the node.
 
-#### Example configuration Fields
+##### Example Configuration Fields
 
-   <img src="/img/credentials/sap-b1/SAP-AC-NIC39.jpg" width="700"  alt="SAP B1 Create a New Item screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-NIC40.jpg" width="700"  alt="SAP B1 Create a New Item screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-NIC41.jpg" width="700"  alt="SAP B1 Create a New Item screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-ACNIC42.jpg" width="700"  alt="SAP B1 Create a New Item screenshot" />
-   <img src="/img/credentials/sap-b1/SAP-AC-NIC43.jpg" width="700"  alt="SAP B1 Create a New Item screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NIC39.jpg" width="700"  alt="SAP B1 Create a New Item step 2 of 6 screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NIC40.jpg" width="700"  alt="SAP B1 Create a New Item step 3 of 6 screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NIC41.jpg" width="700"  alt="SAP B1 Create a New Item step 4 of 6 screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-ACNIC42.jpg" width="700"  alt="SAP B1 Create a New Item step 5 of 6 screenshot" />
+   <img src="/img/credentials/sap-b1/SAP-AC-NIC43.jpg" width="700"  alt="SAP B1 Create a New Item step 6 of 6 screenshot" />
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1293,7 +1299,7 @@ Click on the **Continue** button, then **Run** the node.
 
 -----------------
 
-### Update an Item {#update-a-item}
+#### Update an Item {#update-a-item}
 
 **Update Item** action modifies the details of an existing item in the SAP using its ItemCode. It allows updating specific fields while keeping other data unchanged.
 
@@ -1301,14 +1307,14 @@ This action is commonly used to **maintain accurate product data**, **update pri
 
 > **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged.
 
-#### Select the Credential and Action Event
-   <img src="/img/credentials/sap-b1/ItemUpdate_C.jpg" width="700"  alt="SAP B1 Update an Item screenshot" />
+##### Select the Credential and Action Event
+   <img src="/img/credentials/sap-b1/ItemUpdate_C.jpg" width="700"  alt="SAP B1 Update an Item step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
 ------------
 
-#### Configuration Fields
+##### Configuration Fields
 | Field          | Description |
 |---------------|------------|
 | Item Code | Unique identifier of the item to be updated.(e.g.,"ITM-1001")
@@ -1328,12 +1334,12 @@ Item Name | Name of the item. (e.g., "Laptop Pro 15") |
 
 Click on the **Continue** button, then **Run** the node.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-UI48.jpg" width="700"  alt="SAP B1 Update an Item screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UI49.jpg" width="700"  alt="SAP B1 Update an Item screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UI48.jpg" width="700"  alt="SAP B1 Update an Item step 2 of 3 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UI49.jpg" width="700"  alt="SAP B1 Update an Item step 3 of 3 screenshot" />
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1346,9 +1352,9 @@ Click on the **Continue** button, then **Run** the node.
 ---------------
 
 
-## Quotations Actions
+### Quotations Actions
 
-### Get a quotation by customer reference no
+#### Get a quotation by customer reference no
 
 **Get a Quotation by Customer Reference Number** action retrieves quotation details using the customer reference number (`NumAtCard`). It returns the matching quotation record as a structured object.
 
@@ -1356,12 +1362,12 @@ This action is commonly used to **lookup quotation details**, **track customer-s
 
 > **Note:** If multiple quotations match the provided reference number, the SAP may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GETQTbyNumAtCard51.jpg" width="700"  alt="SAP B1 Get a quotation by customer reference no screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GETQTbyNumAtCard51.jpg" width="700"  alt="SAP B1 Get a quotation by customer reference no step 1 of 2 screenshot" />
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|------------|
@@ -1371,13 +1377,13 @@ Click on the **Continue** button, then **Run** the node.
 
 ----------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GETQbyNumAtCard52.jpg" width="700"  alt="SAP B1 Get a quotation by customer reference no screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETQbyNumAtCard52.jpg" width="700"  alt="SAP B1 Get a quotation by customer reference no step 2 of 2 screenshot" />
 
 ----------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1393,18 +1399,18 @@ Click on the **Continue** button, then **Run** the node.
 --------------
 
 
-### Create a new quotation
+#### Create a new quotation
 
 **Create New Quotation** action creates a new sales quotation in the SAP using customer and item details. It captures all configured data and stores it as a structured document for further processing.
 
 > **Note:** Mandatory fields must be provided to create a quotation. Optional fields can be configured as needed without blocking the process.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-NQTC54.jpg" wdith="700"  alt="SAP B1 Create a new quotation screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-NQTC54.jpg" width="700"  alt="SAP B1 Create a new quotation step 1 of 6 screenshot" />
 
 Click on the **Continue** button.
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -1440,15 +1446,15 @@ Click on the **Continue** button, then **Run** the node.
 
 --------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-NQTC55.jpg" width="700"  alt="SAP B1 Create a new quotation screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-NQTC56.jpg" width="700"  alt="SAP B1 Create a new quotation screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-NQTC57.jpg" width="700"  alt="SAP B1 Create a new quotation screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-NQTC58.jpg" width="700"  alt="SAP B1 Create a new quotation screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-NQTC59.jpg" width="700"  alt="SAP B1 Create a new quotation screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-NQTC55.jpg" width="700"  alt="SAP B1 Create a new quotation step 2 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-NQTC56.jpg" width="700"  alt="SAP B1 Create a new quotation step 3 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-NQTC57.jpg" width="700"  alt="SAP B1 Create a new quotation step 4 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-NQTC58.jpg" width="700"  alt="SAP B1 Create a new quotation step 5 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-NQTC59.jpg" width="700"  alt="SAP B1 Create a new quotation step 6 of 6 screenshot" />
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1472,7 +1478,7 @@ Click on the **Continue** button, then **Run** the node.
 
 -----------------
 
-### Update quotation
+#### Update quotation
 
 **Update Quotation** action modifies an existing quotation in the SAP using the document number (DocNum). It allows updating header details, address information, document lines, and additional expenses.
 
@@ -1480,12 +1486,12 @@ This action is commonly used to **modify quotation details**, **update pricing o
 
 > **Note:** Only the fields provided will be updated. Fields left empty will remain unchanged in the quotation.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-UQT61.jpg" width="700"  alt="SAP B1 Update quotation screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-UQT61.jpg" width="700"  alt="SAP B1 Update quotation step 1 of 6 screenshot" />
 
 Click on the **Continue** button.
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -1519,15 +1525,15 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 
 Click on the **Continue** button, then **Run** the node.
 
-#### Example Configuration 
+##### Example Configuration 
 
-<img src="/img/credentials/sap-b1/SAP-AC-UQT62.jpg" width="700"  alt="SAP B1 Update quotation screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UQT63.jpg" width="700"  alt="SAP B1 Update quotation screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UQT64.jpg" width="700"  alt="SAP B1 Update quotation screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UQT65.jpg" width="700"  alt="SAP B1 Update quotation screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UQT66.jpg" width="700"  alt="SAP B1 Update quotation screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQT62.jpg" width="700"  alt="SAP B1 Update quotation step 2 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQT63.jpg" width="700"  alt="SAP B1 Update quotation step 3 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQT64.jpg" width="700"  alt="SAP B1 Update quotation step 4 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQT65.jpg" width="700"  alt="SAP B1 Update quotation step 5 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQT66.jpg" width="700"  alt="SAP B1 Update quotation step 6 of 6 screenshot" />
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1539,7 +1545,7 @@ Click on the **Continue** button, then **Run** the node.
 
 -----------
 
-### Update quotation customer reference no
+#### Update quotation customer reference no
 
 **Update Quotation Customer Reference Number** action updates the customer reference number (`NumAtCard`) for an existing quotation in the SAP.
 
@@ -1547,14 +1553,14 @@ This action is commonly used to **update customer-specific references**, **align
 
 > **Note:** Only the `NumAtCard` field will be updated for the specified quotation. Ensure the correct DocEntry is provided to avoid updating the wrong record.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-UQTbyNumAtCard68.jpg" width="700"  alt="SAP B1 Update quotation customer reference no screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-UQTbyNumAtCard68.jpg" width="700"  alt="SAP B1 Update quotation customer reference no step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ---------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -1565,13 +1571,13 @@ Click on the **Continue** button, then **Run** the node.
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-UQTbyNumAtCard69.jpg" width="700"  alt="SAP B1 Update quotation customer reference no screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UQTbyNumAtCard69.jpg" width="700"  alt="SAP B1 Update quotation customer reference no step 2 of 2 screenshot" />
 
 ------------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1583,9 +1589,9 @@ Click on the **Continue** button, then **Run** the node.
 
 ------------------
 
-## Orders Actions
+### Orders Actions
 
-### Get an sales order by customer reference no
+#### Get an sales order by customer reference no
 
 **Get a Sales Order by Customer Reference Number** action retrieves sales order details using the customer reference number (`NumAtCard`). It returns the matching sales order record as a structured object.
 
@@ -1593,14 +1599,14 @@ This action is commonly used to **lookup sales order details**, **track customer
 
 > **Note:** If multiple sales orders match the provided reference number, SAP may return the first matching result or a list based on configuration. If no match is found, the output will be empty or null.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GETSObyCRno71.jpg" width="700"  alt="SAP B1 Get an sales order by customer reference no screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GETSObyCRno71.jpg" width="700"  alt="SAP B1 Get an sales order by customer reference no step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 -------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -1608,13 +1614,13 @@ Click on the **Continue** button.
 
 Click on the **Continue** button, then **Run** the node.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GETSObyNumAtCard72.jpg" width="700"  alt="SAP B1 Get an sales order by customer reference no screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETSObyNumAtCard72.jpg" width="700"  alt="SAP B1 Get an sales order by customer reference no step 2 of 2 screenshot" />
 
 ------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1627,7 +1633,7 @@ Click on the **Continue** button, then **Run** the node.
 ]
 ```
 
-### Get order list by item code
+#### Get order list by item code
 
 **Get Order List by Item Code** action retrieves a list of sales orders that contain a specific item. It returns the matching orders as a structured collection of records.
 
@@ -1635,14 +1641,14 @@ This action is commonly used to **track item demand**, **analyze order history**
 
 > **Note:** The result will include only up to the specified size limit. If no matching records are found, the output will be empty.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GETSOLbyIC74.jpg" width="700"  alt="SAP B1 Get order list by item code screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GETSOLbyIC74.jpg" width="700"  alt="SAP B1 Get order list by item code step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ----------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -1651,13 +1657,13 @@ Click on the **Continue** button.
 
 Click on the **Continue** button, then **Run** the node.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GETSOLbyIC75.jpg" width="700"  alt="SAP B1 Get order list by item code screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETSOLbyIC75.jpg" width="700"  alt="SAP B1 Get order list by item code step 2 of 2 screenshot" />
 
 ----------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1672,7 +1678,7 @@ Click on the **Continue** button, then **Run** the node.
 
 ---------
 
-### Create a new sales order
+#### Create a new sales order
 
 **Create New Sales Order** action creates a new sales order in the SAP using customer, item, and delivery details. It captures all configured data and stores it as a structured document for further processing.
 
@@ -1680,12 +1686,12 @@ This action is commonly used to **create customer orders**, **manage sales trans
 
 > **Note:** Mandatory fields must be provided to create a sales order. Optional fields can be configured as needed without blocking the process.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CNO77.jpg" width="700"  alt="SAP B1 Create a new sales order screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CNO77.jpg" width="700"  alt="SAP B1 Create a new sales order step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -1720,16 +1726,16 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 
 -------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CNO78.jpg" width="700"  alt="SAP B1 Create a new sales order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CNO79.jpg" width="700"  alt="SAP B1 Create a new sales order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CNO80.jpg" width="700"  alt="SAP B1 Create a new sales order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CNO81.jpg" width="700"  alt="SAP B1 Create a new sales order screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNO78.jpg" width="700"  alt="SAP B1 Create a new sales order step 2 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNO79.jpg" width="700"  alt="SAP B1 Create a new sales order step 3 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNO80.jpg" width="700"  alt="SAP B1 Create a new sales order step 4 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNO81.jpg" width="700"  alt="SAP B1 Create a new sales order step 5 of 5 screenshot" />
 
 ------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1751,7 +1757,7 @@ Freight or Expenses Code | Additional costs applied to the quotation such as fre
 
 ------------------
 
-### Create a Service
+#### Create a Service
 
 **Create Service** action creates a service-type document (Order or Quotation) in the SAP using customer and service details. It captures all configured data and stores it as a structured document for further processing.
 
@@ -1759,14 +1765,14 @@ This action is commonly used to **create service orders or quotations**, **manag
 
 > **Note:** Mandatory fields must be provided to create the service document. Optional fields can be configured as needed.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CS83.jpg" width="700"  alt="SAP B1 Create a Service screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CS83.jpg" width="700"  alt="SAP B1 Create a Service step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
 ------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -1787,15 +1793,15 @@ Click on the **Continue** button, then **Run** the node.
 
 ----------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CS84.jpg" width="700"  alt="SAP B1 Create a Service screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CS85.jpg" width="700"  alt="SAP B1 Create a Service screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CS86.jpg" width="700"  alt="SAP B1 Create a Service screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CS84.jpg" width="700"  alt="SAP B1 Create a Service step 2 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CS85.jpg" width="700"  alt="SAP B1 Create a Service step 3 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CS86.jpg" width="700"  alt="SAP B1 Create a Service step 4 of 4 screenshot" />
 
 ---------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1812,7 +1818,7 @@ Click on the **Continue** button, then **Run** the node.
 
 ---------------------
 
-### Update Order
+#### Update Order
 
 **Update Order** action modifies an existing sales order in the SAP using the document entry (DocEntry). It allows updating header details, document lines, address information, and additional expenses.
 
@@ -1822,14 +1828,14 @@ This action is commonly used to **update order details**, **modify pricing or it
 
 ------
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-UO88.jpg" width="700"  alt="SAP B1 Update Order screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-UO88.jpg" width="700"  alt="SAP B1 Update Order step 1 of 6 screenshot" />
 
 Click on the **Continue** button.
 
 ------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field         | Description |
 |---------------|---------------|
@@ -1865,17 +1871,17 @@ Click on the **Continue** button, then **Run** the node.
 
 --------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-UO89.jpg" width="700"  alt="SAP B1 Update Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UO90.jpg" width="700"  alt="SAP B1 Update Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UO91.jpg" width="700"  alt="SAP B1 Update Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UO92.jpg" width="700"  alt="SAP B1 Update Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UO93.jpg" width="700"  alt="SAP B1 Update Order screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UO89.jpg" width="700"  alt="SAP B1 Update Order step 2 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UO90.jpg" width="700"  alt="SAP B1 Update Order step 3 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UO91.jpg" width="700"  alt="SAP B1 Update Order step 4 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UO92.jpg" width="700"  alt="SAP B1 Update Order step 5 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UO93.jpg" width="700"  alt="SAP B1 Update Order step 6 of 6 screenshot" />
 
 ------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1886,7 +1892,7 @@ Click on the **Continue** button, then **Run** the node.
 
 ------------------
 
-### Update salesorder customer reference no
+#### Update salesorder customer reference no
 
 **Update Sales Order Customer Reference Number** action updates the customer reference number (`NumAtCard`) for an existing sales order in the SAP.
 
@@ -1894,14 +1900,14 @@ This action is commonly used to **update customer-specific references**, **align
 
 > **Note:** Only the `NumAtCard` field will be updated for the specified sales order. Ensure the correct DocEntry is provided to avoid updating the wrong record.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-USOCRno95.jpg" width="700"  alt="SAP B1 Update salesorder customer reference no screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-USOCRno95.jpg" width="700"  alt="SAP B1 Update salesorder customer reference no step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ----------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -1912,11 +1918,11 @@ Click on the **Continue** button, then **Run** the node.
 
 -------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-USOCRno96.jpg" width="700"  alt="SAP B1 Update salesorder customer reference no screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USOCRno96.jpg" width="700"  alt="SAP B1 Update salesorder customer reference no step 2 of 2 screenshot" />
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1927,7 +1933,7 @@ Click on the **Continue** button, then **Run** the node.
 
 ---------------
 
-### Cancel a Sales Order
+#### Cancel a Sales Order
 
 **Cancel Sales Order** action cancels an existing sales order in the SAP using the document entry (DocEntry). Once cancelled, the order is marked as inactive and cannot be processed further.
 
@@ -1935,14 +1941,14 @@ This action is commonly used to **void incorrect orders**, **handle order cancel
 
 > **Note:** Once a sales order is cancelled, it cannot be reactivated. Ensure the correct DocEntry is provided before performing this action.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CSO98.jpg" width="700"  alt="SAP B1 Cancel a Sales Order screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CSO98.jpg" width="700"  alt="SAP B1 Cancel a Sales Order step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ---------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -1952,11 +1958,11 @@ Click on the **Continue** button, then **Run** the node.
 
 ----------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CSO99.jpg" width="700"  alt="SAP B1 Cancel a Sales Order screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSO99.jpg" width="700"  alt="SAP B1 Cancel a Sales Order step 2 of 2 screenshot" />
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -1970,9 +1976,9 @@ Click on the **Continue** button, then **Run** the node.
 
 --------------
 
-## Invoices Actions
+### Invoices Actions
 
-### Get invoice by DocEntry 
+#### Get invoice by DocEntry 
 
 **Get Invoice by DocEntry** action retrieves invoice details using the internal document entry number (`DocEntry`). It returns the matching invoice record as a structured object.
 
@@ -1980,14 +1986,14 @@ This action is commonly used to **lookup invoice details**, **validate financial
 
 > **Note:** If the provided DocEntry does not exist, the output will be empty or null.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GETbyDocEntry113.jpg" width="700"  alt="SAP B1 Get invoice by DocEntry screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GETbyDocEntry113.jpg" width="700"  alt="SAP B1 Get invoice by DocEntry step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 -------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -1998,13 +2004,13 @@ Click on the **Continue** button, then **Run** the node.
 
 -----------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GETbyDocEntry114.jpg" width="700"  alt="SAP B1 Get invoice by DocEntry screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETbyDocEntry114.jpg" width="700"  alt="SAP B1 Get invoice by DocEntry step 2 of 2 screenshot" />
 
 -------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2019,7 +2025,7 @@ Click on the **Continue** button, then **Run** the node.
 
 --------------
 
-### Get invoice by order DocEntry
+#### Get invoice by order DocEntry
 
 **Get Invoice by Order DocEntry** action retrieves invoice details associated with a specific sales order using the order's document entry number. It returns the related invoice record(s) as structured data.
 
@@ -2027,12 +2033,12 @@ This action is commonly used to **track invoices generated from orders**, **vali
 
 > **Note:** If no invoices are linked to the provided order DocEntry, the output will be empty or null. In case of multiple invoices, the SAP may return one or a list based on configuration.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GETbyODRDocEntry110.jpg" width="700"  alt="SAP B1 Get invoice by order DocEntry screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GETbyODRDocEntry110.jpg" width="700"  alt="SAP B1 Get invoice by order DocEntry step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -2040,13 +2046,13 @@ Click on the **Continue** button.
 
 Click on the **Continue** button, then **Run** the node.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GETbyODRDocEntry111.jpg" width="700"  alt="SAP B1 Get invoice by order DocEntry screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETbyODRDocEntry111.jpg" width="700"  alt="SAP B1 Get invoice by order DocEntry step 2 of 2 screenshot" />
 
 -----------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2068,7 +2074,7 @@ Click on the **Continue** button, then **Run** the node.
 
 -------------
 
-### Get invoice by NumAtCard
+#### Get invoice by NumAtCard
 
 **Get Invoice by Customer Reference Number** action retrieves invoice details using the customer reference number (`NumAtCard`). It returns the matching invoice record(s) as structured data.
 
@@ -2076,14 +2082,14 @@ This action is commonly used to **lookup invoice details**, **track customer-spe
 
 > **Note:** If multiple invoices match the provided reference number, the system may return a single record or a list based on configuration. If no match is found, the output will be empty or null.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GETINVbyNumAtCard107.jpg" width="700"  alt="SAP B1 Get invoice by NumAtCard screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GETINVbyNumAtCard107.jpg" width="700"  alt="SAP B1 Get invoice by NumAtCard step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -2091,11 +2097,11 @@ Click on the **Continue** button.
 
 Click on the **Continue** button, then **Run** the node.
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GETINVbyNumAtCard108.jpg" width="700"  alt="SAP B1 Get invoice by NumAtCard screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETINVbyNumAtCard108.jpg" width="700"  alt="SAP B1 Get invoice by NumAtCard step 2 of 2 screenshot" />
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2110,7 +2116,7 @@ Click on the **Continue** button, then **Run** the node.
 
 -------------
 
-### Create a new AR invoice
+#### Create a new AR invoice
 
 **Create New AR Invoice** action creates a new Accounts Receivable invoice in the SAP using customer and item details. It supports both standard AR invoices and reserve invoices.
 
@@ -2118,14 +2124,14 @@ This action is commonly used to **generate invoices**, **bill customers**, and *
 
 > **Note:** Mandatory fields must be provided to create an invoice. Optional fields can be configured as needed without blocking the process.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CNINV102.jpg" width="700"  alt="SAP B1 Create a new AR invoice screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CNINV102.jpg" width="700"  alt="SAP B1 Create a new AR invoice step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
 -------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -2153,15 +2159,15 @@ Click on the **Continue** button, then **Run** the node.
 
 ------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CNINV103.jpg" width="700"  alt="SAP B1 Create a new AR invoice screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CNINV104.jpg" width="700"  alt="SAP B1 Create a new AR invoice screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CNINV105.jpg" width="700"  alt="SAP B1 Create a new AR invoice screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNINV103.jpg" width="700"  alt="SAP B1 Create a new AR invoice step 2 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNINV104.jpg" width="700"  alt="SAP B1 Create a new AR invoice step 3 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNINV105.jpg" width="700"  alt="SAP B1 Create a new AR invoice step 4 of 4 screenshot" />
 
 ------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2188,9 +2194,9 @@ Click on the **Continue** button, then **Run** the node.
 ----------------
 
 
-## Returns Actions
+### Returns Actions
 
-### Create Returns
+#### Create Returns
 
 **Create Returns** action creates a return document in the system for items returned by a customer. It captures return details and stores them as a structured document for further processing.
 
@@ -2198,14 +2204,14 @@ This action is commonly used to **process product returns**, **adjust inventory*
 
 > **Note:** Mandatory fields must be provided to create a return document. Optional fields can be configured as needed.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CRETURN107.jpg" width="700"  alt="SAP B1 Create Returns screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CRETURN107.jpg" width="700"  alt="SAP B1 Create Returns step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
 ----------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field          | Description |
 |---------------|---------------|
@@ -2234,15 +2240,15 @@ Click on the **Continue** button, then **Run** the node.
 
 --------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CRETURN108.jpg" width="700"  alt="SAP B1 Create Returns screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CRETURN109.jpg" width="700"  alt="SAP B1 Create Returns screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CRETURN110.jpg" width="700"  alt="SAP B1 Create Returns screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRETURN108.jpg" width="700"  alt="SAP B1 Create Returns step 2 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRETURN109.jpg" width="700"  alt="SAP B1 Create Returns step 3 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRETURN110.jpg" width="700"  alt="SAP B1 Create Returns step 4 of 4 screenshot" />
 
 -------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2269,22 +2275,22 @@ Click on the **Continue** button, then **Run** the node.
 
 --------------------
 
-## ServiceCall Actions
+### ServiceCall Actions
 
-### Create Service Call
+#### Create Service Call
 
 **Create Service Call** action creates a new service request in the SAP with customer, item, and issue details. It helps in tracking service activities and managing support processes.
 
 **Note:** Mandatory fields must be provided to create a service call. Optional fields can be configured based on business requirements.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CSRVCCL121.jpg" width="700"  alt="SAP B1 Create Service Call screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CSRVCCL121.jpg" width="700"  alt="SAP B1 Create Service Call step 1 of 7 screenshot" />
 
 Click on the **Continue** button.
 
 -----------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2327,18 +2333,18 @@ Click on the **Continue** button, then **Run** the node.
 
 -----------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL122.jpg" width="700"  alt="SAP B1 Create Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL123.jpg" width="700"  alt="SAP B1 Create Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL124.jpg" width="700"  alt="SAP B1 Create Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL125.jpg" width="700"  alt="SAP B1 Create Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL126.jpg" width="700"  alt="SAP B1 Create Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL127.jpg" width="700"  alt="SAP B1 Create Service Call screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL122.jpg" width="700"  alt="SAP B1 Create Service Call step 2 of 7 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL123.jpg" width="700"  alt="SAP B1 Create Service Call step 3 of 7 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL124.jpg" width="700"  alt="SAP B1 Create Service Call step 4 of 7 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL125.jpg" width="700"  alt="SAP B1 Create Service Call step 5 of 7 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL126.jpg" width="700"  alt="SAP B1 Create Service Call step 6 of 7 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCL127.jpg" width="700"  alt="SAP B1 Create Service Call step 7 of 7 screenshot" />
 
 ---------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2363,20 +2369,20 @@ Click on the **Continue** button, then **Run** the node.
 --------------
 
 
-### Update Service Call
+#### Update Service Call
 
 **Update Service Call** action is used to modify an existing service request with updated customer, item, status, and resolution details. It helps in tracking progress, updating issue status, and maintaining service history.
 
 **Note:** Ensure valid status and priority values are selected based on business rules. Optional address fields can be updated if required.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-USVCL130.jpg" width="700"  alt="SAP B1 Update Service Call screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-USVCL130.jpg" width="700"  alt="SAP B1 Update Service Call step 1 of 8 screenshot" />
 
 Click on the **Continue** button.
 
 ------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2423,18 +2429,18 @@ Click on the **Continue** button, then **Run** the node.
 
 -------------
 
-#### Example Configuration
-<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL131.jpg" width="700"  alt="SAP B1 Update Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL132.jpg" width="700"  alt="SAP B1 Update Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL133.jpg" width="700"  alt="SAP B1 Update Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL134.jpg" width="700"  alt="SAP B1 Update Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL135.jpg" width="700"  alt="SAP B1 Update Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL136.jpg" width="700"  alt="SAP B1 Update Service Call screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL137.jpg" width="700"  alt="SAP B1 Update Service Call screenshot" />
+##### Example Configuration
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL131.jpg" width="700"  alt="SAP B1 Update Service Call step 2 of 8 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL132.jpg" width="700"  alt="SAP B1 Update Service Call step 3 of 8 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL133.jpg" width="700"  alt="SAP B1 Update Service Call step 4 of 8 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL134.jpg" width="700"  alt="SAP B1 Update Service Call step 5 of 8 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL135.jpg" width="700"  alt="SAP B1 Update Service Call step 6 of 8 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL136.jpg" width="700"  alt="SAP B1 Update Service Call step 7 of 8 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USRVCCL137.jpg" width="700"  alt="SAP B1 Update Service Call step 8 of 8 screenshot" />
 
 -----------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2446,34 +2452,38 @@ Click on the **Continue** button, then **Run** the node.
 --------------------
 
 
-## SalesOpportunities Actions
+### SalesOpportunities Actions
 
-### Create a new Sales Opportunity
+#### Create a new Sales Opportunity
 
 **Create a New Sales Opportunity** action is used to record potential sales deals in the SAP. It helps track leads, monitor progress through different stages, and estimate revenue.
 
 **Note:** Sales Opportunity Lines are mandatory to track stages and progress of the opportunity. Optional fields can be configured based on business requirements.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CNSOPPR141.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CNSOPPR141.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity step 1 of 8 screenshot" />
 
 Click on the **Continue** button.
 
 ----------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
 | BusinessPartner Code | Enter the customer/business partner code. (e.g., "BC6129916") |
 | Opportunity Name | Provide the name of the opportunity. (e.g., "Demo Opportunity") |
 | Start Date | Specify the opportunity start date. (e.g., "2026-04-06") |
-|Sales Opportunity Lines
-Start Date | Specify the start date of the stage. (e.g., "2026-04-06") |
+##### Sales Opportunity Lines
+
+| Field | Description |
+|------|-------------|
+| Start Date | Specify the start date of the stage. (e.g., "2026-04-06") |
 | Closing Date | Expected closing date of the opportunity. (e.g., "2026-04-06") |
 | Maximum Local Total | Estimated maximum value of the opportunity. (e.g., "80000") |
 | Stage Key | Define the stage of the opportunity. (e.g., "3") |
-|Optional Fields
+##### Optional Fields
+
 | Contact Person Code | Identifier of the contact person. (e.g., "134") |
 | Total Amount | Total estimated value of the opportunity. (e.g., "80000") |
 | Remarks | Additional notes or comments. (e.g., "Test Demo") |
@@ -2482,15 +2492,15 @@ Click on the **Continue** button, then **Run** the node.
 
 ----------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP142.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP143.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP144.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP142.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity step 2 of 8 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP143.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity step 3 of 8 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP144.jpg" width="700"  alt="SAP B1 Create a new Sales Opportunity step 4 of 8 screenshot" />
 
 ------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2526,9 +2536,9 @@ Click on the **Continue** button, then **Run** the node.
 -------------
 
 
-## Exchange Rate Actions
+### Exchange Rate Actions
 
-### Get Currency Exchange Rate
+#### Get Currency Exchange Rate
 
 **Get Currency Exchange Rate** action retrieves the exchange rate between two currencies for a specific date. It helps in financial calculations, reporting, and currency conversions.
 
@@ -2536,14 +2546,14 @@ This action is commonly used to **convert currencies**, **calculate financial va
 
 > **Note:** If no date is provided, the system may return the latest available exchange rate.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GCRNCYRATE147.jpg" width="700"  alt="SAP B1 Get Currency Exchange Rate screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GCRNCYRATE147.jpg" width="700"  alt="SAP B1 Get Currency Exchange Rate step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 -------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2554,13 +2564,13 @@ Click on the **Continue** button, then **Run** the node.
 
 ------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GCRNCYRATE148.jpg" width="700"  alt="SAP B1 Get Currency Exchange Rate screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GCRNCYRATE148.jpg" width="700"  alt="SAP B1 Get Currency Exchange Rate step 2 of 2 screenshot" />
 
 ----------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2572,7 +2582,7 @@ Click on the **Continue** button, then **Run** the node.
 ------------
 
 
-### Set Currency Rate
+#### Set Currency Rate
 
 **Set Currency Rate** action is used to define or update the exchange rate for a specific currency on a given date. This is useful for maintaining accurate financial records and currency conversions.
 
@@ -2580,14 +2590,14 @@ Click on the **Continue** button, then **Run** the node.
 
 --------------
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-STCRNCYRATE150.jpg" width="700"  alt="SAP B1 Set Currency Rate screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-STCRNCYRATE150.jpg" width="700"  alt="SAP B1 Set Currency Rate step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2599,13 +2609,13 @@ Click on the **Continue** button, then **Run** the node.
 
 -------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-SCRNCYRATE151.jpg" width="700"  alt="SAP B1 Set Currency Rate screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-SCRNCYRATE151.jpg" width="700"  alt="SAP B1 Set Currency Rate step 2 of 2 screenshot" />
 
 -----------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2621,38 +2631,47 @@ Click on the **Continue** button, then **Run** the node.
 --------------------
 
 
-## Sales Tax Codes Actions
+### Sales Tax Codes Actions
 
-### Create Sales Tax Code
+#### Create Sales Tax Code
 
 **Create Sales Tax Code** action is used to define a new tax code in the SAP. It helps manage taxation rules for sales and purchasing transactions.
 
 > **Note:** Tax configurations should be set carefully as they directly impact financial calculations and compliance.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CSLSTAXCODE234.jpg" width="700"  alt="SAP B1 Create Sales Tax Code screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CSLSTAXCODE234.jpg" width="700"  alt="SAP B1 Create Sales Tax Code step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
 | Tax Code | Unique identifier for the tax. (e.g., "IMST") |
 | Tax Name | Name of the tax. (e.g., "IMST") |
 | Tax Rate (%) | Percentage of the tax rate. (e.g., "5") |
-|Sales Tax Code Lines
-Tax Authority Code (STACode) | Code representing the tax authority. (e.g., "CA") |
+##### Sales Tax Code Lines
+
+| Field | Description |
+|------|-------------|
+| Tax Authority Code (STACode) | Code representing the tax authority. (e.g., "CA") |
 | Tax Authority Type (STAType) | Type of tax authority. (e.g., "Country") |
-|Optional Fields
-Sales Tax Code | Additional tax code reference if applicable. (e.g., "GST_SALES") |
+##### Optional Fields
+
+| Field | Description |
+|------|-------------|
+| Sales Tax Code | Additional tax code reference if applicable. (e.g., "GST_SALES") |
 | Effective Rate | Effective tax rate after adjustments. (e.g., "18") |
 | Tax on Tax Code | Specifies dependent tax code. (e.g., "CESS") |
 | Tax on Tax Type | Type of tax applied on another tax. (e.g., "Inclusive") |
-|Additional Optional Settings
-Valid for AR (Accounts Receivable) | Indicates if applicable for sales transactions. (e.g., "Yes") |
+##### Additional Optional Settings
+
+| Field | Description |
+|------|-------------|
+| Valid for AR (Accounts Receivable) | Indicates if applicable for sales transactions. (e.g., "Yes") |
 | Valid for AP (Accounts Payable) | Indicates if applicable for purchase transactions. (e.g., "Yes") |
 | Freight | Specifies if tax applies to freight charges. (e.g., "Yes") |
 | Is Item Level | Determines if tax is applied at item level. (e.g., "Yes") |
@@ -2663,13 +2682,13 @@ Click on the **Continue** button, then **Run** the node.
 
 -------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CSLSTAXCODE235.jpg" width="700"  alt="SAP B1 Create Sales Tax Code screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSLSTAXCODE235.jpg" width="700"  alt="SAP B1 Create Sales Tax Code step 2 of 2 screenshot" />
 
 -------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2700,32 +2719,41 @@ Click on the **Continue** button, then **Run** the node.
 ```
 --------------------
 
-### Update Sales Tax Code
+#### Update Sales Tax Code
 
 **Update Sales Tax Code** action is used to modify an existing tax code in the SAP. It allows updating tax details and configurations based on business or compliance requirements.
 
-#### Select the Credential and Action Event
+##### Select the Credential and Action Event
 Click on the **Continue** button.
 
 -------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
 | Tax Code (Identifier) | Enter the unique tax code to be updated. (e.g., "IMST") |
 | Tax Name | Name of the tax. (e.g., "IMST") |
 | Tax Rate (%) | Percentage of the tax rate. (e.g., "6") |
-|Sales Tax Code Lines
-Tax Authority Code (STACode) | Code representing the tax authority. (e.g., "CA") |
+##### Sales Tax Code Lines
+
+| Field | Description |
+|------|-------------|
+| Tax Authority Code (STACode) | Code representing the tax authority. (e.g., "CA") |
 | Tax Authority Type (STAType) | Type of tax authority. (e.g., "Country") |
-|Optional Fields
-Sales Tax Code | Additional tax code reference if applicable. (e.g., "GST_SALES") |
+##### Optional Fields
+
+| Field | Description |
+|------|-------------|
+| Sales Tax Code | Additional tax code reference if applicable. (e.g., "GST_SALES") |
 | Effective Rate | Effective tax rate after adjustments. (e.g., "18") |
 | Tax on Tax Code | Specifies dependent tax code. (e.g., "CESS") |
 | Tax on Tax Type | Type of tax applied on another tax. (e.g., "Inclusive") |
-|Additional Optional Settings
-Valid for AR (Accounts Receivable) | Indicates if applicable for sales transactions. (e.g., "Yes") |
+##### Additional Optional Settings
+
+| Field | Description |
+|------|-------------|
+| Valid for AR (Accounts Receivable) | Indicates if applicable for sales transactions. (e.g., "Yes") |
 | Valid for AP (Accounts Payable) | Indicates if applicable for purchase transactions. (e.g., "Yes") |
 | Freight | Specifies if tax applies to freight charges. (e.g., "Yes") |
 | Is Item Level | Determines if tax is applied at item level. (e.g., "Yes") |
@@ -2733,17 +2761,17 @@ Valid for AR (Accounts Receivable) | Indicates if applicable for sales transacti
 
 > **Note:** Only the provided fields will be updated. Ensure the correct Tax Code is used, as it directly impacts financial calculations and reporting.
 
-Click on the **Continue** button., Then **Run** node
+Click on the **Continue** button, then **Run** node
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
 <img src="/img/credentials/sap-b1/SAP-AC-USLSTAXCODE236.jpg" width="700"  alt="SAP B1 Update Sales Tax Code screenshot" />
 
 ----------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -2755,22 +2783,22 @@ Click on the **Continue** button., Then **Run** node
 
 -------------------
 
-## Special Prices Action
+### Special Prices Action
 
-### Get Special Prices by Card Code
+#### Get Special Prices by Card Code
 
 **Get Special Prices by Card Code** action retrieves all special pricing details configured for a specific business partner. It helps in identifying customer-specific pricing agreements and discounts.
 
 > **Note:** This action returns all special prices associated with the given Card Code, including item-level pricing and discounts if configured.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GSPRCbyCRDCDE153.jpg" width="700"  alt="SAP B1 Get Special Prices by Card Code screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GSPRCbyCRDCDE153.jpg" width="700"  alt="SAP B1 Get Special Prices by Card Code step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ----------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|--------------|
@@ -2780,13 +2808,13 @@ Click on the **Continue** button, then **Run** the node.
 
 ------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GETSPRCbyCRDCODE154.jpg" width="700"  alt="SAP B1 Get Special Prices by Card Code screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GETSPRCbyCRDCODE154.jpg" width="700"  alt="SAP B1 Get Special Prices by Card Code step 2 of 2 screenshot" />
 
 --------------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2866,20 +2894,20 @@ Click on the **Continue** button, then **Run** the node.
 
 --------------
 
-## Return Request Actions
+### Return Request Actions
 
-### Create Return Request
+#### Create Return Request
 
 **Create Return Request** action creates a new return request document in the SAP for items that need to be returned. It captures customer, item, and pricing details for further processing.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CRTNRQST161.jpg" width="700"  alt="SAP B1 Create Return Request screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CRTNRQST161.jpg" width="700"  alt="SAP B1 Create Return Request step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
 -------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -2911,15 +2939,15 @@ Click on the **Continue** button, then **Run** the node.
 
 -------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST162.jpg" width="700"  alt="SAP B1 Create Return Request screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST163.jpg" width="700"  alt="SAP B1 Create Return Request screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST164.jpg" width="700"  alt="SAP B1 Create Return Request screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST162.jpg" width="700"  alt="SAP B1 Create Return Request step 2 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST163.jpg" width="700"  alt="SAP B1 Create Return Request step 3 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CRTNRQST164.jpg" width="700"  alt="SAP B1 Create Return Request step 4 of 4 screenshot" />
 
 ---------
 
-#### Result
+##### Result
 ```json
 [
   {
@@ -2964,20 +2992,20 @@ Click on the **Continue** button, then **Run** the node.
 ---------------------
 
 
-## Sales Opportunities Action
+### Sales Opportunities Action
 
-### Create a new sales opportunity
+#### Create a new sales opportunity
 
 **Create a New Sales Opportunity** action is used to record and track potential sales deals in the system, including stages, expected value, and customer details.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CSOPP191.jpg" width="700"  alt="SAP B1 Create a new sales opportunity screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CSOPP191.jpg" width="700"  alt="SAP B1 Create a new sales opportunity step 5 of 8 screenshot" />
 
 Click on the **Continue** button.
 
 ----------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3000,15 +3028,15 @@ Click on the **Continue** button, then **Run** the node.
 
 ------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP192.jpg" width="700"  alt="SAP B1 Create a new sales opportunity screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP193.jpg" width="700"  alt="SAP B1 Create a new sales opportunity screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP194.jpg" width="700"  alt="SAP B1 Create a new sales opportunity screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP192.jpg" width="700"  alt="SAP B1 Create a new sales opportunity step 6 of 8 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP193.jpg" width="700"  alt="SAP B1 Create a new sales opportunity step 7 of 8 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CNSOPP194.jpg" width="700"  alt="SAP B1 Create a new sales opportunity step 8 of 8 screenshot" />
 
 --------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3099,20 +3127,20 @@ Click on the **Continue** button, then **Run** the node.
 
 --------------------
 
-## Purchase Order Action
+### Purchase Order Action
 
-### Create Purchase Order
+#### Create Purchase Order
 
 **Create Purchase Order** action creates a new purchase order in the SAP for procuring goods or services from a vendor. It captures vendor, item, pricing, and delivery details.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CPRORD205.jpg" width="700"  alt="SAP B1 Create Purchase Order screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CPRORD205.jpg" width="700"  alt="SAP B1 Create Purchase Order step 1 of 6 screenshot" />
 
 Click on the **Continue** button.
 
 -------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3162,15 +3190,15 @@ Click on the **Continue** button, then **Run** the node.
 
 --------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CPRORD200.jpg" width="700"  alt="SAP B1 Create Purchase Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CPRORD201.jpg" width="700"  alt="SAP B1 Create Purchase Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CPRORD202.jpg" width="700"  alt="SAP B1 Create Purchase Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CPRORD203.jpg" width="700"  alt="SAP B1 Create Purchase Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CPRORD204.jpg" width="700"  alt="SAP B1 Create Purchase Order screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CPRORD200.jpg" width="700"  alt="SAP B1 Create Purchase Order step 2 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CPRORD201.jpg" width="700"  alt="SAP B1 Create Purchase Order step 3 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CPRORD202.jpg" width="700"  alt="SAP B1 Create Purchase Order step 4 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CPRORD203.jpg" width="700"  alt="SAP B1 Create Purchase Order step 5 of 6 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CPRORD204.jpg" width="700"  alt="SAP B1 Create Purchase Order step 6 of 6 screenshot" />
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3224,18 +3252,18 @@ Click on the **Continue** button, then **Run** the node.
 ```
 --------------
 
-### Update Purchase Order
+#### Update Purchase Order
 
 **Update Purchase Order** action modifies an existing purchase order using the document entry (DocEntry). It allows updating vendor reference details, item lines, and address information.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-UPRORD201.jpg" width="700"  alt="SAP B1 Update Purchase Order screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-UPRORD201.jpg" width="700"  alt="SAP B1 Update Purchase Order step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
 -----------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3271,14 +3299,14 @@ Click on the **Continue** button., then **Run** the node
 
 -----------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-UPRORD211.jpg" width="700"  alt="SAP B1 Update Purchase Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UPRORD212.jpg" width="700"  alt="SAP B1 Update Purchase Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UPRORD213.jpg" width="700"  alt="SAP B1 Update Purchase Order screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UPRORD214.jpg" width="700"  alt="SAP B1 Update Purchase Order screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UPRORD211.jpg" width="700"  alt="SAP B1 Update Purchase Order step 2 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UPRORD212.jpg" width="700"  alt="SAP B1 Update Purchase Order step 3 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UPRORD213.jpg" width="700"  alt="SAP B1 Update Purchase Order step 4 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UPRORD214.jpg" width="700"  alt="SAP B1 Update Purchase Order step 5 of 5 screenshot" />
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3291,20 +3319,20 @@ Click on the **Continue** button., then **Run** the node
 ----------------------
 
 
-## Incoming Payments Action
+### Incoming Payments Action
 
-### Create CreditCard Incoming Payments
+#### Create CreditCard Incoming Payments
 
 **Create Credit Card Incoming Payments** action records an incoming payment made via credit card for a customer. It captures card details, payment amount, and related information.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CCRDPMNT217.jpg" width="700"  alt="SAP B1 Create CreditCard Incoming Payments screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CCRDPMNT217.jpg" width="700"  alt="SAP B1 Create CreditCard Incoming Payments step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
 ------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3321,18 +3349,18 @@ Remarks | Add any additional notes related to the payment. (e.g., "Payment recei
 > **Note:** Ensure credit card details are accurate and valid before processing the payment.
 
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 ------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CCRDPMNT216.jpg" width="700"  alt="SAP B1 Create CreditCard Incoming Payments screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CCRDPMNT217.jpg" width="700"  alt="SAP B1 Create CreditCard Incoming Payments screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CCRDPMNT216.jpg" width="700"  alt="SAP B1 Create CreditCard Incoming Payments step 2 of 3 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CCRDPMNT217.jpg" width="700"  alt="SAP B1 Create CreditCard Incoming Payments step 3 of 3 screenshot" />
 
 ----------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3375,18 +3403,18 @@ Click on the **Continue** button., then **Run** node
 ```
 ---------------
 
-### Create Check Incoming Payments
+#### Create Check Incoming Payments
 
 **Create Check Incoming Payments** action records an incoming payment made via cheque for a customer. It captures bank details, cheque amount, and related payment information.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CCKINMGPMNT218.jpg" width="700"  alt="SAP B1 Create Check Incoming Payments screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CCKINMGPMNT218.jpg" width="700"  alt="SAP B1 Create Check Incoming Payments step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
 -------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3402,18 +3430,18 @@ Cheque Bank Account | Enter the bank account linked to the cheque. (e.g., "_SYS0
 
 > **Note:** Ensure cheque details are accurate before processing to avoid payment discrepancies.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CCKINCMGPMNT218.jpg" width="700"  alt="SAP B1 Create Check Incoming Payments screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CCKINMGPMNTS219.jpg" width="700"  alt="SAP B1 Create Check Incoming Payments screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CCKINCMGPMNT218.jpg" width="700"  alt="SAP B1 Create Check Incoming Payments step 2 of 3 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CCKINMGPMNTS219.jpg" width="700"  alt="SAP B1 Create Check Incoming Payments step 3 of 3 screenshot" />
 
 ---------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3443,19 +3471,19 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-### Create Cash Incoming Payments
+#### Create Cash Incoming Payments
 
 **Create Cash Incoming Payments** action records an incoming payment made via cash for a customer. It captures customer details, cash account, and payment amount.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="/img/credentials/sap-b1/SAP-C-CCASHINCMGPMNTS212.jpg" width="700"  alt="SAP B1 Create Cash Incoming Payments screenshot" />
+<img src="/img/credentials/sap-b1/SAP-C-CCASHINCMGPMNTS212.jpg" width="700"  alt="SAP B1 Create Cash Incoming Payments step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 --------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3469,17 +3497,17 @@ Click on the **Continue** button.
 
 > **Note:** Ensure the correct cash account and amount are provided to maintain accurate financial records.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 ----------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CCASHINCMGPMNTS221.jpg" width="700"  alt="SAP B1 Create Cash Incoming Payments screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CCASHINCMGPMNTS221.jpg" width="700"  alt="SAP B1 Create Cash Incoming Payments step 2 of 2 screenshot" />
 
 ---------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3502,20 +3530,20 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-## Delivery Note Actions
+### Delivery Note Actions
 
-### Create a Delivery Note
+#### Create a Delivery Note
 
 **Create Delivery Note** action creates a delivery document in the SAP for goods being shipped to a customer. It captures delivery, item, and logistics details for order fulfillment.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CDLVRYNT222.jpg" width="700"  alt="SAP B1 Create a Delivery Note screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CDLVRYNT222.jpg" width="700"  alt="SAP B1 Create a Delivery Note step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
 -------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3555,19 +3583,19 @@ Additional Expenses | Extra charges such as freight or handling. (e.g., "250") |
 
 > **Note:** Mandatory fields must be provided to create a delivery note. Optional fields can be configured based on business requirements.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 ------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CDLVRYNT223.jpg" width="700"  alt="SAP B1 Create a Delivery Note screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CDLVRYNT224.jpg" width="700"  alt="SAP B1 Create a Delivery Note screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CDLVRYNT225.jpg" width="700"  alt="SAP B1 Create a Delivery Note screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CDLVRYNT223.jpg" width="700"  alt="SAP B1 Create a Delivery Note step 2 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CDLVRYNT224.jpg" width="700"  alt="SAP B1 Create a Delivery Note step 3 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CDLVRYNT225.jpg" width="700"  alt="SAP B1 Create a Delivery Note step 4 of 4 screenshot" />
 
 ----------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3621,16 +3649,16 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-### Update a Delivery Note
+#### Update a Delivery Note
 
 **Update Delivery Note** action modifies an existing delivery document using the document entry (DocEntry). It allows updating item details, quantities, pricing, and header information.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-UDLVRYNT226.jpg" width="700"  alt="SAP B1 Update a Delivery Note screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-UDLVRYNT226.jpg" width="700"  alt="SAP B1 Update a Delivery Note step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3666,19 +3694,19 @@ Additional Expenses | Extra charges such as freight or handling. (e.g., "200") |
 
 > **Note:** Only the fields provided will be updated. Ensure the correct DocEntry is used to avoid modifying the wrong delivery note.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-UDLVRYNT227.jpg" width="700"  alt="SAP B1 Update a Delivery Note screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UDLVRYNT228.jpg" width="700"  alt="SAP B1 Update a Delivery Note screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-UDLVRYNT229.jpg" width="700"  alt="SAP B1 Update a Delivery Note screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UDLVRYNT227.jpg" width="700"  alt="SAP B1 Update a Delivery Note step 2 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UDLVRYNT228.jpg" width="700"  alt="SAP B1 Update a Delivery Note step 3 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-UDLVRYNT229.jpg" width="700"  alt="SAP B1 Update a Delivery Note step 4 of 4 screenshot" />
 
 ---------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3689,18 +3717,18 @@ Click on the **Continue** button., then **Run** node
 ```
 
 
-### Get Delivery by Order DocEntry
+#### Get Delivery by Order DocEntry
 
 **Get Delivery by Order DocEntry** action retrieves delivery note details associated with a specific sales order using the order's document entry number. It returns the related delivery document(s) as structured data.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GDLVRYNTbyDOCENTRYNO229.jpg" width="700"  alt="SAP B1 Get Delivery by Order DocEntry screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GDLVRYNTbyDOCENTRYNO229.jpg" width="700"  alt="SAP B1 Get Delivery by Order DocEntry step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3708,17 +3736,17 @@ Click on the **Continue** button.
 
 > **Note:** If no delivery notes are linked to the provided Order DocEntry, the output will be empty or null. If multiple deliveries exist, the system may return one or a list based on configuration.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 ---------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GDLVRYNTbyDOCENTRYNO230.jpg" width="700"  alt="SAP B1 Get Delivery by Order DocEntry screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GDLVRYNTbyDOCENTRYNO230.jpg" width="700"  alt="SAP B1 Get Delivery by Order DocEntry step 2 of 2 screenshot" />
 
 ------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3741,16 +3769,16 @@ Click on the **Continue** button., then **Run** node
 ```
 --------------
 
-### Get Delivery by NumAtCard
+#### Get Delivery by NumAtCard
 
 **Get Delivery by Customer Reference Number** action retrieves delivery note details using the customer reference number (`NumAtCard`). It returns the matching delivery document(s) as structured data.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GDLVRYNTbyNumAtCard231.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GDLVRYNTbyNumAtCard231.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3758,17 +3786,17 @@ Click on the **Continue** button.
 
 > **Note:** If multiple delivery notes match the provided reference number, the system may return a single record or a list based on configuration. If no match is found, the output will be empty or null.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 --------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GDLVRYNTbyNumAtCard232.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GDLVRYNTbyNumAtCard232.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard step 2 of 5 screenshot" />
 
 -----------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3830,18 +3858,20 @@ Click on the **Continue** button., then **Run** node
 ```
 ----------
 
-## DownPayment Actions
+### DownPayments Actions
+
+#### Create a New Downpayment Invoice
 
 **Create Down Payment** action creates a down payment document for a customer. It is used to record advance payments before the final invoice is generated.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CDNPMNTINVC231.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CDNPMNTINVC231.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard step 3 of 5 screenshot" />
 
 Click on the **Continue** button.
 
 ----------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3858,18 +3888,18 @@ Unit Price | Price per unit. (e.g., "100") |
 
 > **Note:** Down payments are typically used for advance billing. Ensure correct customer and pricing details before creating the document.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 --------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CDNPAMNTINV232.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CDNPAMNTINV233.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CDNPAMNTINV232.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard step 4 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CDNPAMNTINV233.jpg" width="700"  alt="SAP B1 Get Delivery by NumAtCard step 5 of 5 screenshot" />
 
 -------------
 
-#### Result
+##### Result
 
 ```json
 {
@@ -3892,20 +3922,20 @@ Click on the **Continue** button., then **Run** node
 ```
 ----------------
 
-## SalesForecast Action
+### SalesForecast Action
 
-### Create a SalesForecast
+#### Create a SalesForecast
 
 **Create Sales Forecast** action is used to define future sales expectations for items over a specified period. It helps in planning inventory, production, and business strategies.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-CSLSFRCST239.jpg" width="700"  alt="SAP B1 Create a SalesForecast screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-CSLSFRCST239.jpg" width="700"  alt="SAP B1 Create a SalesForecast step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
 --------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -3921,18 +3951,18 @@ Click on the **Continue** button.
 
 > **Note:** Forecast lines are essential for defining item-level predictions. Optional fields can be configured based on planning requirements.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 -------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CSLSFRCST240.jpg" width="700"  alt="SAP B1 Create a SalesForecast screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CSLSFRCST241.png" width="700"  alt="SAP B1 Create a SalesForecast screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSLSFRCST240.jpg" width="700"  alt="SAP B1 Create a SalesForecast step 2 of 3 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSLSFRCST241.png" width="700"  alt="SAP B1 Create a SalesForecast step 3 of 3 screenshot" />
 
 ----------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -3956,12 +3986,12 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-### Update SalesForecast
+#### Update SalesForecast
 
 **Update Sales Forecast** action is used to modify an existing sales forecast using its unique identifier. It allows updating forecast details and item-level forecast data.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-USLSFRCS242.jpg" width="700"  alt="SAP B1 Update SalesForecast screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-USLSFRCS242.jpg" width="700"  alt="SAP B1 Update SalesForecast step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
@@ -3982,18 +4012,18 @@ Click on the **Continue** button.
 
 > **Note:** Only the provided fields will be updated. Ensure the correct forecast Id is used to avoid modifying the wrong forecast data.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 ------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-USLSFRCST243.jpg" width="700"  alt="SAP B1 Update SalesForecast screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-USLSFRCST244.jpg" width="700"  alt="SAP B1 Update SalesForecast screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USLSFRCST243.jpg" width="700"  alt="SAP B1 Update SalesForecast step 2 of 3 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USLSFRCST244.jpg" width="700"  alt="SAP B1 Update SalesForecast step 3 of 3 screenshot" />
 
 -----------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4005,18 +4035,18 @@ Click on the **Continue** button., then **Run** node
 
 ---------------
 
-### Get Sales Forecast by Id
+#### Get Sales Forecast by Id
 
 **Get Sales Forecast by Id** action retrieves details of a specific sales forecast using its unique identifier (Numerator). It returns forecast header and line-level data.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GSLSFRCSTbyId245.jpg" width="700"  alt="SAP B1 Get Sales Forecast by Id screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GSLSFRCSTbyId245.jpg" width="700"  alt="SAP B1 Get Sales Forecast by Id step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ---------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4024,17 +4054,17 @@ Click on the **Continue** button.
 
 > **Note:** If no forecast exists for the provided Id, the response will be empty or null.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 --------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GSLSFRCSTbyId246.jpg" width="700"  alt="SAP B1 Get Sales Forecast by Id screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GSLSFRCSTbyId246.jpg" width="700"  alt="SAP B1 Get Sales Forecast by Id step 2 of 2 screenshot" />
 
 ---------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4058,21 +4088,21 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-## PaymentDraft Actions
+### PaymentDraft Actions
 
-### Create Payment Draft
+#### Create Payment Draft
 
 **Create Payment Draft** action is used to create a draft payment document (incoming or outgoing). It allows users to save payment details for review before final posting.
 
 #### Select Credentials and Payments
 
-<img src="/img/credentials/sap-b1/SAP-C-CDRFTPAMNT247.jpg" width="700"  alt="SAP B1 Create Payment Draft screenshot" />
+<img src="/img/credentials/sap-b1/SAP-C-CDRFTPAMNT247.jpg" width="700"  alt="SAP B1 Create Payment Draft step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
 --------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4087,18 +4117,18 @@ Click on the **Continue** button.
 
 > **Note:** Draft payments can be reviewed and finalized later. Mandatory fields must be provided to create the draft successfully.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 ----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CDRFTPAMNTS248.jpg" width="700"  alt="SAP B1 Create Payment Draft screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CDRFTPAMNTS249.jpg" width="700"  alt="SAP B1 Create Payment Draft screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CDRFTPAMNTS248.jpg" width="700"  alt="SAP B1 Create Payment Draft step 2 of 3 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CDRFTPAMNTS249.jpg" width="700"  alt="SAP B1 Create Payment Draft step 3 of 3 screenshot" />
 
 -------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4132,18 +4162,18 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-### Get Payment Draft by DocEntry
+#### Get Payment Draft by DocEntry
 
 **Get Payment Draft by DocEntry** action retrieves details of a specific payment draft using its internal document entry number. It returns the draft payment information as structured data.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-GDRFTPAMNTbyDOCENTRY249.jpg" width="700"  alt="SAP B1 Get Payment Draft by DocEntry screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-GDRFTPAMNTbyDOCENTRY249.jpg" width="700"  alt="SAP B1 Get Payment Draft by DocEntry step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ----------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4151,17 +4181,17 @@ Click on the **Continue** button.
 
 > **Note:** If no draft exists for the provided DocEntry, the response will be empty or null.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CDRFTPAMNTbyDOCENTRY250.jpg" width="700"  alt="SAP B1 Get Payment Draft by DocEntry screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CDRFTPAMNTbyDOCENTRY250.jpg" width="700"  alt="SAP B1 Get Payment Draft by DocEntry step 2 of 2 screenshot" />
 
 ---------------
 
-#### Result
+##### Result
 
 ```json
 {
@@ -4187,18 +4217,18 @@ Click on the **Continue** button., then **Run** node
 }
 ```
 
-### Convert Payment Draft to Incoming Payment
+#### Convert Payment Draft to Incoming Payment
 
 **Convert Payment Draft to Incoming Payment** action converts an existing payment draft into a finalized incoming payment. This is typically done after reviewing and confirming the draft details.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-ConvertdrafttoIncomingPayments251.jpg" width="700"  alt="SAP B1 Convert Payment Draft to Incoming Payment screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-ConvertdrafttoIncomingPayments251.jpg" width="700"  alt="SAP B1 Convert Payment Draft to Incoming Payment step 1 of 3 screenshot" />
 
 Click on the **Continue** button.
 
 ----------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4206,17 +4236,18 @@ Click on the **Continue** button.
 
 > **Note:** Once converted, the draft becomes a posted incoming payment and may no longer be editable as a draft. Ensure all details are verified before conversion.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 ---------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-ConvertdrafttoIncomingPayment251.jpg" width="700"  alt="SAP B1 Convert Payment Draft to Incoming Payment screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-ConvertdrafttoIncomingPayment251.jpg" width="700"  alt="SAP B1 Convert Payment Draft to Incoming Payment step 2 of 3 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AR-ConvertdrafttoIncomingPayment252.jpg" width="700"  alt="SAP B1 Convert Payment Draft to Incoming Payment step 3 of 3 screenshot" />
 
 -------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4225,25 +4256,22 @@ Click on the **Continue** button., then **Run** node
   }
 ]
 ```
-
-<img src="/img/credentials/sap-b1/SAP-AR-ConvertdrafttoIncomingPayment252.jpg" width="700"  alt="SAP B1 Convert Payment Draft to Incoming Payment screenshot" />
-
 ------------
 
-## Blanket Agreements Actions
+### Blanket Agreements Actions
 
-### Create Sales Blanket Agreement
+#### Create Sales Blanket Agreement
 
 **Create Sales Blanket Agreement** action is used to define long-term agreements with customers for supplying goods or services under predefined terms. It helps in managing recurring sales with agreed pricing and quantities.
 
-#### Select the Credential and Action Event
-<img src="/img/credentials/sap-b1/SAP-C-BLNKARGEMNT253.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement screenshot" />
+##### Select the Credential and Action Event
+<img src="/img/credentials/sap-b1/SAP-C-BLNKARGEMNT253.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
 --------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4262,19 +4290,19 @@ Click on the **Continue** button.
 
 > **Note:** Blanket agreements are used for long-term contracts. Ensure correct pricing and quantities are defined before creating the agreement.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 --------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CBLNKTAGREMENT255.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CBLNKTAGREMENT256.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CBLNKTAGREMENT257.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CBLNKTAGREMENT255.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement step 2 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CBLNKTAGREMENT256.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement step 3 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CBLNKTAGREMENT257.jpg" width="700"  alt="SAP B1 Create Sales Blanket Agreement step 4 of 4 screenshot" />
 
 -----------------------
 
-#### Result
+##### Result
 
 ```json
 {
@@ -4301,19 +4329,19 @@ Click on the **Continue** button., then **Run** node
 }
 ```
 
-### Update Sales Blanket Agreement
+#### Update Sales Blanket Agreement
 
 **Update Sales Blanket Agreement** action is used to modify an existing blanket agreement using its agreement number. It allows updating business partner details, agreement validity, and item-level terms.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="/img/credentials/sap-b1/SAP-C-USLSBLANKTAGREMENT258.jpg" width="700"  alt="SAP B1 Update Sales Blanket Agreement screenshot" />
+<img src="/img/credentials/sap-b1/SAP-C-USLSBLANKTAGREMENT258.jpg" width="700"  alt="SAP B1 Update Sales Blanket Agreement step 1 of 4 screenshot" />
 
 Click on the **Continue** button.
 
 ------------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4331,18 +4359,18 @@ Click on the **Continue** button.
 
 > **Note:** Only the provided fields will be updated. Ensure the correct Agreement No and row number are used to avoid unintended changes.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 -----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-USLABLANKTAGREMENT258.jpg" width="700"  alt="SAP B1 Update Sales Blanket Agreement screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-USLSBLNKTAGREMENT259.jpg" width="700"  alt="SAP B1 Update Sales Blanket Agreement screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USLABLANKTAGREMENT258.jpg" width="700"  alt="SAP B1 Update Sales Blanket Agreement step 2 of 4 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-USLSBLNKTAGREMENT259.jpg" width="700"  alt="SAP B1 Update Sales Blanket Agreement step 3 of 4 screenshot" />
 
 -------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4352,28 +4380,28 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-<img src="/img/credentials/sap-b1/SAP-AR-USLSBLNKTAGREMENT260.jpg" width="700"  alt="SAP B1 Update Sales Blanket Agreement screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AR-USLSBLNKTAGREMENT260.jpg" width="700"  alt="SAP B1 Update Sales Blanket Agreement step 4 of 4 screenshot" />
 
 </TabItem>
 </Tabs>
 
 
 
-## Serial Number Details Action
+### Serial Number Details Action
 
-### Get Serial Number Details by serial number
+#### Get Serial Number Details by serial number
 
 **Get Serial Number Details by Serial Number** action retrieves detailed information of an item using its unique serial number. It helps in tracking item history, availability, and related transactions.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="/img/credentials/sap-b1/SAP-C-GSRLNUMbySLNO261.jpg" width="700"  alt="SAP B1 Get Serial Number Details by serial number screenshot" />
+<img src="/img/credentials/sap-b1/SAP-C-GSRLNUMbySLNO261.jpg" width="700"  alt="SAP B1 Get Serial Number Details by serial number step 1 of 2 screenshot" />
 
-Clcik on **Continue** button
+Click on **Continue** button
 
 ----------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4381,15 +4409,15 @@ Clcik on **Continue** button
 
 > **Note:** If the provided serial number does not exist, the response will be empty or null.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 --------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GSRLNUMbySRLNo262.jpg" width="700"  alt="SAP B1 Get Serial Number Details by serial number screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GSRLNUMbySRLNo262.jpg" width="700"  alt="SAP B1 Get Serial Number Details by serial number step 2 of 2 screenshot" />
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4412,21 +4440,21 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-## Service Contracts Action
+### Service Contracts Action
 
-### Create Service Contract
+#### Create Service Contract
 
 **Create Service Contract** action is used to define a service agreement for a customer, typically covering warranty or support services for specific items or serial numbers.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="/img/credentials/sap-b1/SAP-C-CSRVCCNTRCT263.jpg" width="700"  alt="SAP B1 Create Service Contract screenshot" />
+<img src="/img/credentials/sap-b1/SAP-C-CSRVCCNTRCT263.jpg" width="700"  alt="SAP B1 Create Service Contract step 1 of 5 screenshot" />
 
 Click on the **Continue** button.
 
 ------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4452,20 +4480,20 @@ Manufacturer Serial Number | Manufacturer-provided serial number. (e.g., "SL001"
 
 > **Note:** Ensure correct serial numbers and service dates are configured, as they define the validity and scope of the service contract.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 --------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCNTRCT264.jpg" width="700"  alt="SAP B1 Create Service Contract screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCNTRCT265.jpg" width="700"  alt="SAP B1 Create Service Contract screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCNTRCT266.jpg" width="700"  alt="SAP B1 Create Service Contract screenshot" />
-<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCNTRCT267.jpg" width="700"  alt="SAP B1 Create Service Contract screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCNTRCT264.jpg" width="700"  alt="SAP B1 Create Service Contract step 2 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCNTRCT265.jpg" width="700"  alt="SAP B1 Create Service Contract step 3 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCNTRCT266.jpg" width="700"  alt="SAP B1 Create Service Contract step 4 of 5 screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CSRVCCNTRCT267.jpg" width="700"  alt="SAP B1 Create Service Contract step 5 of 5 screenshot" />
 
 --------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4539,19 +4567,19 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-### Get Service Contracts by Customer Code
+#### Get Service Contracts by Customer Code
 
 **Get Service Contracts by Customer Code** action retrieves all service contracts associated with a specific customer. It helps in tracking active, expired, or draft service agreements.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="/img/credentials/sap-b1/SAP-C-GSRCCNTRCTbyCSTMRCDE268.jpg" width="700"  alt="SAP B1 Get Service Contracts by Customer Code screenshot" />
+<img src="/img/credentials/sap-b1/SAP-C-GSRCCNTRCTbyCSTMRCDE268.jpg" width="700"  alt="SAP B1 Get Service Contracts by Customer Code step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 --------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4559,17 +4587,17 @@ Click on the **Continue** button.
 
 > **Note:** If no service contracts are found for the provided customer code, the response will be empty or null.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 ----------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GSRVCCNTRCTbyCSTMRCDE269.jpg" width="700"  alt="SAP B1 Get Service Contracts by Customer Code screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GSRVCCNTRCTbyCSTMRCDE269.jpg" width="700"  alt="SAP B1 Get Service Contracts by Customer Code step 2 of 2 screenshot" />
 
 -------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4708,18 +4736,18 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-### Get Service Contract by Contract ID
+#### Get Service Contract by Contract ID
 
 Retrieves the details of a service contract using the specified contract ID.
 
-#### Select Credentials and Action Events
-<img src="/img/credentials/sap-b1/SAP-C-GTSRVCCONTRCTbyCNTRCTID.jpg" width="700"  alt="SAP B1 Get Service Contract by Contract ID screenshot" />
+##### Select Credentials and Action Events
+<img src="/img/credentials/sap-b1/SAP-C-GTSRVCCONTRCTbyCNTRCTID.jpg" width="700"  alt="SAP B1 Get Service Contract by Contract ID step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 ---------------------------
 
-#### Configuration
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4727,17 +4755,17 @@ Click on the **Continue** button.
 
 > **Note:** `Contract ID` is mandatory.
 
-Click on the **Continue** button., then **Run** node.
+Click on the **Continue** button, then **Run** node.
 
 -------------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-GTSRVCCONTRCTbyCNTRCTID.jpg" width="700"  alt="SAP B1 Get Service Contract by Contract ID screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-GTSRVCCONTRCTbyCNTRCTID.jpg" width="700"  alt="SAP B1 Get Service Contract by Contract ID step 2 of 2 screenshot" />
 
 -------------------------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4812,21 +4840,21 @@ Click on the **Continue** button., then **Run** node.
 ---------------------------------------
 
 
-## Customer Equipment Card Actions
+### Customer Equipment Card Actions
 
-### Create Customer Equipment Card
+#### Create Customer Equipment Card
 
 **Create Customer Equipment Card** action is used to register and track equipment assigned to a customer. It helps manage installed items, serial numbers, and service-related details.
 
-#### Select Credentials and Action Events
+##### Select Credentials and Action Events
 
-<img src="/img/credentials/sap-b1/SAP-C-CEQPCRD270.jpg" width="700"  alt="SAP B1 Create Customer Equipment Card screenshot" />
+<img src="/img/credentials/sap-b1/SAP-C-CEQPCRD270.jpg" width="700"  alt="SAP B1 Create Customer Equipment Card step 1 of 2 screenshot" />
 
 Click on the **Continue** button.
 
 -------------------
 
-#### Configuration Fields
+##### Configuration Fields
 
 | Field | Description |
 |------|-------------|
@@ -4840,17 +4868,17 @@ Contact Employee Code | Identifier of the contact employee. (e.g., "4") |
 
 > **Note:** Ensure serial numbers are unique and correctly mapped to the customer for accurate tracking and service management.
 
-Click on the **Continue** button., then **Run** node
+Click on the **Continue** button, then **Run** node
 
 -------------------
 
-#### Example Configuration
+##### Example Configuration
 
-<img src="/img/credentials/sap-b1/SAP-AC-CEQPCRD271.jpg" width="700"  alt="SAP B1 Create Customer Equipment Card screenshot" />
+<img src="/img/credentials/sap-b1/SAP-AC-CEQPCRD271.jpg" width="700"  alt="SAP B1 Create Customer Equipment Card step 2 of 2 screenshot" />
 
 -----------
 
-#### Result
+##### Result
 
 ```json
 [
@@ -4903,6 +4931,7 @@ Click on the **Continue** button., then **Run** node
 ]
 ```
 
-### Need Help?
+## Need Help?
 
 If you are unsure about any field or face connection issues, reach out to our support team at [hello@appse.ai](mailto:hello@appse.ai)
+
