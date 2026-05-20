@@ -160,9 +160,25 @@ The ZIP package is downloaded to your local machine.
 
 <img src="/img/platform/key-concepts/on-premise-agent/run-as-admin.png" alt="Run Installer as Administrator" width="700" height="400"/>
 
+#### Windows Security Prompt
+
+After selecting **Run as administrator**, Windows Defender SmartScreen may display a security warning for the installer.
+
+- Click **More info**
+
+<img src="/img/platform/key-concepts/on-premise-agent/windows-protected-your-pc.png" alt="Windows Protected Your PC Warning" width="700" height="400"/>
+
+- Click **Run anyway** to continue the installation
+
+<img src="/img/platform/key-concepts/on-premise-agent/run-anyway.png" alt="Run Anyway Option" width="700" height="400"/>
+
+:::info
+This prompt may appear because the installer is being executed from a locally downloaded package.
+:::
+
 #### Windows User Account Control
 
-After selecting **Run as administrator**, Windows may display a **User Account Control (UAC)** prompt asking for permission to allow the application to make changes to the device.
+Windows may display a **User Account Control (UAC)** prompt asking for permission to allow the application to make changes to the device.
 
 - Click **Yes** to continue the installation
 
