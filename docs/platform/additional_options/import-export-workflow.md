@@ -23,7 +23,7 @@ This feature helps teams save time, reduce duplication, and maintain consistency
 
 3. Select the **`.awf`** file (encrypted workflow export) from your system.
 
-<img src="/img/platform/additional-options/import-or-export-workflows/3-select-workflow.png" alt="select workflow screen" width="700"/> 
+<img src="/img/platform/additional-options/import-or-export-workflows/3-select-workflow.png" alt="select workflow screen" width="700"/>
 
 4. Click **Confirm** to start the import process.
 
