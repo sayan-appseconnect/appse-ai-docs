@@ -195,7 +195,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
@@ -276,7 +280,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
@@ -323,7 +331,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
@@ -374,7 +386,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
@@ -418,7 +434,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 
 ```json
 [
@@ -465,7 +485,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
@@ -510,7 +534,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
@@ -555,7 +583,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
@@ -605,7 +637,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
@@ -650,7 +686,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
@@ -695,7 +735,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
@@ -745,7 +789,11 @@ Click on **Continue** button, then **Run** the node.
 
 ##### Example Configuration
 
-**Note**: "The configuration fields are the same for all triggers - refer to the screenshot above."`r`n##### Result
+:::note
+The configuration fields are the same for all triggers - refer to the screenshot above.
+:::
+
+##### Result
 ```json
 [
   {
