@@ -95,7 +95,7 @@ Make sure the B2B Edition scope is checked. It is mandatory for accessing B2B fe
 
 <img src="/img/credentials/bigcommerce-b2b/bigcommerce-cred-access-token-4.png" alt="BigCommerce B2B access token screen" width="700"/>
 
-You will now have your **Access Token** for use within the APPSe AI platform.
+You will now have your **Access Token** for use within the appse.ai platform.
 
 ### Test Your Credential
 
@@ -133,11 +133,11 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Fetch Data Since | Specify the date and time to fetch new company records. (e.g., "01/04/2024 05:58") |
 | Limit | Define the number of records to retrieve. (e.g., "10" or "1") |
 
-> :::note
+:::note
 Fetch Data Since is mandatory. Limit can be adjusted based on how many records you want to retrieve.
 :::
 
@@ -197,11 +197,11 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Fetch Data Since | Specify the date and time to fetch new user records. (e.g., "01/04/2024 05:58") |
 | Limit | Define the number of records to retrieve. (e.g., "10" or "1") |
 
-> :::note
+:::note
 Fetch Data Since is mandatory. Limit can be adjusted based on how many records you want to retrieve.
 :::
 
@@ -211,7 +211,7 @@ Click on **Continue**, then **Run** node.
 
 ##### Example Configuration
 
-> :::note
+:::note
 The configuration fields are the same for all triggers - refer to the screenshot above.
 :::
 
@@ -261,11 +261,11 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Fetch Data Since | Specify the date and time to fetch new quote records. (e.g., "01/04/2024 05:58") |
 | Limit | Define the number of records to retrieve. (e.g., "10" or "1") |
 
-> :::note
+:::note
 Fetch Data Since is mandatory. Limit can be adjusted based on how many records you want to retrieve.
 :::
 
@@ -275,7 +275,7 @@ Click on **Continue**, then **Run** node.
 
 ##### Example Configuration
 
-> :::note
+:::note
 The configuration fields are the same for all triggers - refer to the screenshot above.
 :::
 
@@ -332,11 +332,11 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Fetch Data Since | Specify the date and time to fetch new B2B order records. (e.g., "01/04/2024 05:58") |
 | Limit | Define the number of records to retrieve. (e.g., "10" or "1") |
 
-> :::note
+:::note
 Fetch Data Since is mandatory. Limit can be adjusted based on how many records you want to retrieve.
 :::
 
@@ -346,7 +346,7 @@ Click on **Continue**, then **Run** node.
 
 ##### Example Configuration
 
-> :::note
+:::note
 The configuration fields are the same for all triggers - refer to the screenshot above.
 :::
 
@@ -407,7 +407,7 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Company Name | Enter the company name. (e.g., "VentoBen") |
 | Company Phone | Enter the company contact number. (e.g., "9878987654") |
 | Company Email | Enter the company email address. (e.g., "ventoben.co@yopmail.com") |
@@ -470,7 +470,7 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Company Id | Enter the unique company identifier. (e.g., "12711142") |
 | State | Enter the state code. (e.g., "TS") |
 | Country | Enter the country code. (e.g., "IN") |
@@ -528,10 +528,12 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Company Id | Enter the unique company identifier. (e.g., "12711142") |
 
-> **Note:** Company Id is mandatory. The action returns company details for the specified company.
+:::note
+Company Id is mandatory. The action returns company details for the specified company.
+:::
 
 Click on **Continue**, then **Run** node.
 
@@ -598,7 +600,7 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | First Name | Enter the user's first name. (e.g., "Nicke") |
 | Last Name | Enter the user's last name. (e.g., "Genwell") |
 | Company Id | Enter the associated company identifier. (e.g., "12711142") |
@@ -607,7 +609,9 @@ Click on **Continue** button.
 | Optional Fields | Additional user details that can be configured. |
 | Phone | Contact number of the user. (e.g., "8767801400") |
 
-> **Note:** First Name, Last Name, Company Id, Email, and Role are mandatory. Optional fields can be added as required.
+:::note
+First Name, Last Name, Company Id, Email, and Role are mandatory. Optional fields can be added as required.
+:::
 
 Click on **Continue**, then **Run** node.
 
@@ -650,7 +654,7 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | User Id (Identifier) | Enter the unique user identifier. (e.g., "18382574") |
 | Optional Fields | Additional user details that can be updated. |
 | First Name | User's first name. (e.g., "Nickee") |
@@ -659,7 +663,9 @@ Click on **Continue** button.
 | Phone | User contact number. (e.g., "7656789098") |
 | Role | Assign or update user role. (e.g., "Manager") |
 
-> **Note:** User Id is mandatory. Only the provided optional fields will be updated. Role can be set as Manager, Buyer, or Admin based on requirements.
+:::note
+User Id is mandatory. Only the provided optional fields will be updated. Role can be set as Manager, Buyer, or Admin based on requirements.
+:::
 
 Click on **Continue**, then **Run** node.
 
@@ -722,10 +728,12 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Email | Enter the user email address. (e.g., "nicke.genwell@yopmail.com") |
 
-> **Note:** Email is mandatory. The action returns matching user details for the specified email.
+:::note
+Email is mandatory. The action returns matching user details for the specified email.
+:::
 
 Click on **Continue**, then **Run** node.
 
@@ -780,10 +788,12 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | User Id | Enter the unique user identifier. (e.g., "18382574") |
 
-> **Note:** User Id is mandatory. The action returns user details for the specified user.
+:::note
+User Id is mandatory. The action returns user details for the specified user.
+:::
 
 Click on **Continue**, then **Run** node.
 
@@ -845,12 +855,14 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Company Id | Enter the unique company identifier. (e.g., "12711142") |
 | Optional Fields | Additional parameters to filter results. |
 | Limit | Define the number of records to retrieve. (e.g., "2") |
 
-> **Note:** Company Id is mandatory. Limit can be used to restrict the number of users returned.
+:::note
+Company Id is mandatory. Limit can be used to restrict the number of users returned.
+:::
 
 Click on **Continue**, then **Run** node.
 
@@ -929,12 +941,14 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Company Id | Enter the unique company identifier. (e.g., "12623321") |
 | Optional Fields | Additional parameters to filter results. |
 | Limit | Define the number of records to retrieve. (e.g., "50" or "1") |
 
-> **Note:** Company Id is mandatory. Limit can be used to control the number of address records returned.
+:::note
+Company Id is mandatory. Limit can be used to control the number of address records returned.
+:::
 
 Click on **Continue**, then **Run** node.
 
@@ -989,7 +1003,7 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Address Id | Enter the unique address identifier. (e.g., "35205391") |
 | Optional Fields | Additional address details that can be updated. |
 | Company Id | Enter the associated company identifier. (e.g., "12623321") |
@@ -1005,7 +1019,9 @@ Click on **Continue** button.
 | State Name | State name. (e.g., "Andhra Pradesh") |
 | Phone Number | Contact number. (e.g., "8987876766") |
 
-> **Note:** Address Id is mandatory. Only the provided optional fields will be updated.
+:::note
+Address Id is mandatory. Only the provided optional fields will be updated.
+:::
 
 Click on **Continue**, then **Run** node.
 
@@ -1050,10 +1066,12 @@ Click on **Continue** button.
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | BC Order Id | Enter the BigCommerce order identifier. (e.g., "503") |
 
-> **Note:** BC Order Id is mandatory. The action returns order details mapped with the specified BigCommerce order.
+:::note
+BC Order Id is mandatory. The action returns order details mapped with the specified BigCommerce order.
+:::
 
 Click on **Continue**, then **Run** node.
 
@@ -1119,36 +1137,49 @@ Click on **Continue**, then **Run** node.
 
 #### Create Invoice
 
-Create Invoice action is used to generate a new invoice for an existing order in Magento2 using the specified order ID.
+Create Invoice action is used to generate a new invoice for an existing order in BigCommerce B2B using the specified order ID.
 
 ##### Select Credentials and Action Events
-<img src="/img/credentials/bigcommerce-b2b/C-CRTINVOICE.jpg" alt="BigComB2B Create Invoice - Credential selection" width="700" />
+<img src="/img/credentials/bigcommerce-b2b/C-CRTINVOICE.jpg" alt="Create Invoice - Select credentials" width="700" />
 
 Click on **Continue** button.
 
 ---------------------------
 
-##### Configuration
+##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|------|--------------|
 | Order Id | Specify the unique order ID for which the invoice should be created. (e.g., `29544152`) |
 
-> **Note:** Order Id is a mandatory field and should contain a valid Magento2 order identifier.
+:::note
+Order Id is a mandatory field and should contain a valid BigCommerce B2B order identifier.
+:::
 
 Click on **Continue**, then **Run** node.
 
 -------------------------
 
 ##### Example Configuration
-<img src="/img/credentials/bigcommerce-b2b/AC-CRTINVOICE.jpg" alt="BigComB2B Create Invoice - Example Configuration" width="700" />
+<img src="/img/credentials/bigcommerce-b2b/AC-CRTINVOICE.jpg" alt="Create Invoice - Example configuration" width="700" />
 
 -------------------------
 
 ##### Result
 
 ```json
-
+[
+  {
+    "code": 200,
+    "data": {
+      "invoiceNumber": "11430877",
+      "invoiceId": 11430877
+    },
+    "meta": {
+      "message": "SUCCESS"
+    }
+  }
+]
 ```
 ---------------------------------------
 
@@ -1158,4 +1189,4 @@ Click on **Continue**, then **Run** node.
 </div>
 
 ## Support
-Need help? Contact our support team at [hello@appse.ai](mailto:hello@appse.ai)
+If you are unsure about any field or face connection issues, reach out to our support team at [hello@appse.ai](mailto:hello@appse.ai)
