@@ -127,12 +127,12 @@ Every application has a pre-defined set of triggers and actions that allow users
 ### Trigger Events
 
 - [New Company Created](#new-company-created)
-- [New Customer Created](#new-customer-created)
-- [Customer Updated](#customer-updated)
+- [New Customers Created](#new-customers-created)
+- [Customers Updated](#customers-updated)
 - [New Company Location Created](#new-company-location-created)
-- [New Product Created](#new-product-created)
+- [New Products Created](#new-products-created)
 - [Products Updated](#products-updated)
-- [New Order Created](#new-order-created)
+- [New Orders Created](#new-orders-created)
 - [Orders Cancelled](#orders-cancelled)
 - [New Refund Created](#new-refund-created)
 - [New Return Created](#new-return-created)
@@ -300,7 +300,7 @@ Click on **Continue**, then **Run** the node.
 ```
 ----------------
 
-#### New Customer Created
+#### New Customers Created
 
 New Customer Created trigger is activated whenever a new customer is created in Shopify. It helps capture newly added customer records for automation and workflow processing.
 
@@ -399,7 +399,7 @@ The configuration fields are the same for all triggers — refer to the screensh
 ```
 ----------------
 
-#### Customer Updated
+#### Customers Updated
 
 Customer Updated trigger is activated whenever a customer is updated in Shopify. It helps capture modified customer records for automation and workflow processing.
 
@@ -602,7 +602,7 @@ The configuration fields are the same for all triggers — refer to the screensh
 ```
 ----------------
 
-#### New Product Created
+#### New Products Created
 
 New Product Created trigger is activated whenever a new product is created in Shopify. It helps capture newly added product records for automation and workflow processing.
 
@@ -822,7 +822,7 @@ The configuration fields are the same for all triggers — refer to the screensh
 ```
 ----------------
 
-#### New Order Created
+#### New Orders Created
 
 New Order Created trigger is activated whenever a new order is created in Shopify. It helps capture newly added order records for automation and workflow processing.
 
@@ -1861,7 +1861,7 @@ The configuration fields are the same for all triggers — refer to the screensh
 
 ## Actions
 
-### Customer Actions
+### Customers Actions
 
 #### Get Customer by Email
 
@@ -2797,7 +2797,7 @@ Click on **Continue**, then click **Run** node.
 ```
 ------------------
 
-### Product Actions
+### Products Actions
 
 #### Create Product
 
@@ -3096,6 +3096,141 @@ Default Variant SKU is required. If no product matches the SKU, the response may
   }
 ]
 ```
+---
+
+#### Create Product with Options and Media
+
+Create Product with Options and Media action is used to create a new product in Shopify along with product details, media assets, and additional optional information.
+
+##### Select Credentials and Action Events
+
+<img src="/img/credentials/shopify/C-NewPrdctwithMedia.jpg" alt = "Create Product with Media" width="700" />
+
+Click on **Continue** button.
+
+---
+
+##### Configuration Fields
+
+| Field | Description |
+|------|--------------|
+| Title | Specify the product title or name. (e.g., `IQ-V1`) |
+| Description | Enter the product description with details about the product features or specifications. (e.g., `IQ Mobile - Colour(Sea blue) Looks smart and Performance was good`) |
+| Product Type | Specify the category or type of the product. (e.g., `T-Shirt`) |
+| Status | Define the product status in Shopify. (e.g., `ACTIVE`) |
+| Media | Configure one or more media items for the product. |
+| Source URL | Specify the Shopify file URL for the media asset. (e.g., `https://admin.shopify.com/store/aecqa/content/files/33353411887276?selectedView=all`) |
+| Media Content Type | Select the type of media content to upload. (e.g., `Image`) |
+| Alt Text | Specify alternative text for the media asset to improve accessibility and SEO. (e.g., `Mobileimg`) |
+
+:::note
+Title and Media fields are mandatory. Multiple media items can be added if required.
+:::
+
+Click on **Continue**, then **Run** node.
+
+---
+
+##### Example Configuration
+<img src="/img/credentials/shopify/AC-CreatePrdouctwithMedia1.jpg" alt="Shopify Create Product with Options and Media - Example Configuration" width="700" />
+<img src="/img/credentials/shopify/AC-CreatePrdoctwithMedia2.jpg" alt="Shopify Create Product with Options and Media - Example Configuration" width="700" />
+
+---
+
+##### Result
+
+```json
+[
+  {
+    "userErrors": [],
+    "product": {
+      "id": "gid://shopify/Product/8569637372076",
+      "title": "IQ-V1",
+      "handle": "iq-v1",
+      "status": "ACTIVE",
+      "vendor": "AECQA",
+      "tags": [],
+      "unpublishedPublications": {
+        "edges": [
+          {
+            "node": {
+              "id": "gid://shopify/Publication/123613773996"
+            }
+          },
+          {
+            "node": {
+              "id": "gid://shopify/Publication/123613872300"
+            }
+          },
+          {
+            "node": {
+              "id": "gid://shopify/Publication/123613937836"
+            }
+          },
+          {
+            "node": {
+              "id": "gid://shopify/Publication/124182200492"
+            }
+          },
+          {
+            "node": {
+              "id": "gid://shopify/Publication/147472089260"
+            }
+          }
+        ]
+      },
+      "metafields": {
+        "nodes": []
+      },
+      "createdAt": "2026-05-26T11:12:49Z",
+      "updatedAt": "2026-05-26T11:12:49Z",
+      "options": [
+        {
+          "id": "gid://shopify/ProductOption/10986411032748",
+          "name": "Title",
+          "position": 1,
+          "optionValues": [
+            {
+              "id": "gid://shopify/ProductOptionValue/4199242399916",
+              "name": "Default Title",
+              "hasVariants": true
+            }
+          ]
+        }
+      ],
+      "variants": {
+        "edges": [
+          {
+            "node": {
+              "id": "gid://shopify/ProductVariant/46311828979884",
+              "sku": null,
+              "title": "Default Title",
+              "price": "0.00",
+              "inventoryItem": {
+                "id": "gid://shopify/InventoryItem/48406657335468",
+                "tracked": false
+              }
+            }
+          }
+        ]
+      },
+      "media": {
+        "edges": [
+          {
+            "node": {
+              "id": "gid://shopify/MediaImage/33353414181036",
+              "alt": "Mobileimg",
+              "mediaContentType": "IMAGE",
+              "status": "UPLOADED"
+            }
+          }
+        ]
+      }
+    }
+  }
+]
+```
+---
 
 ### Product Variants Actions
 
@@ -3159,9 +3294,9 @@ Variant ID is required. Only the provided optional fields are updated; other val
 
 ### Inventory Actions
 
-#### Activate Inventory Location
+#### Activate Inventory Locations
 
-Activate Inventory Location action is used to activate a specific inventory location in Shopify using the location ID, enabling it to track and manage inventory.
+Activate Inventory Locations action is used to activate a specific inventory location in Shopify using the location ID, enabling it to track and manage inventory.
 
 ##### Select Credentials and Action Events
 
@@ -3723,7 +3858,7 @@ Click on **Continue** button
 ```
 --------------
 
-### Discount Actions
+### Discounts Actions
 
 #### Create Discount Code
 
@@ -3804,7 +3939,7 @@ Percentage | Enter the discount percentage value. (e.g., "1") |
 ```
 --------------
 
-### Order Actions
+### Orders Actions
 
 #### Get Order by Order ID
 
@@ -4937,7 +5072,7 @@ Click on **Continue** button
 ```
 --------------
 
-### Catalog Actions
+### Catalogs Actions
 
 #### Create Catalog
 
