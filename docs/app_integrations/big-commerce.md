@@ -20,7 +20,7 @@ Follow the steps below to quickly set up your credential.
 The following fields are required to authenticate your BigCommerce account:
 
 | Field        | Description                                      |
-|--------------|--------------------------------------------------|
+|----|----|
 | Store Hash   | Unique identifier for your BigCommerce store     |
 | API Token    | Token used to authenticate API requests          |
 
@@ -50,11 +50,11 @@ The following fields are required to authenticate your BigCommerce account:
 Here is a recommended table for the required OAuth scopes:
 
 | OAuth Scope                                       | Access     |
-|--------------------------------------------------|------------|
+|----|----|
 | Content                                           | None       |
 | Checkout Content                                 | None       |
 | Customers                                         | modify     |
-| Coustomers login                                 | None       |
+| Customers login                                 | None       |
 | Information & settings                           | None       |
 | Marketing                                         | None       |
 | Orders                                            | modify     |
@@ -102,7 +102,7 @@ Once both **Store Hash** and **API Token** are entered into the credential form,
 
 ## Triggers and Actions
 
-Every application has a pre-defined set of triggers and actions that allow users to perform application specific activities within the platform. Here is a list of all the actions and triggers available:
+Every application has a predefined set of triggers and actions that allow users to perform application-specific activities within the platform. Here is a list of all the actions and triggers available:
 
 <Tabs>
   <TabItem value="triggers" label="Triggers">
@@ -111,38 +111,38 @@ Every application has a pre-defined set of triggers and actions that allow users
 
 #### New Customer Created
 
-**New Customer Created** trigger is activated whenever a new customer record is created in BigCommerce. It helps capture newly added customers for automation and workflow processing.
+New Customer Created trigger is activated whenever a new customer record is created in BigCommerce. It helps capture newly added customers for automation and workflow processing.
 
-##### Select Credentials and Trigger Event
+##### Select Credentials and Trigger Events
 
-<img src="/img/credentials/big-commerce/C-NWCUSTMRCRTD1.jpg" alt="BigCommerce New Customer Created trigger — Select Credentials and Trigger Event" width="700" />
+<img src="/img/credentials/big-commerce/C-NWCUSTMRCRTD1.jpg" alt="BigCommerce New Customer Created trigger — Select Credentials and Trigger Events" width="700" />
 
 Click on **Continue** button
 
-----------------------
+----
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | Fetch Data Since | Specify the date and time to start fetching newly created customers. (e.g., "01/04/2025 09:15") |
 | Limit | Define the maximum number of records to retrieve. (e.g., "1") |
 
-> **Note:** The trigger returns newly created customer records based on the provided time range and limit. Ensure the correct timestamp is configured to avoid missing records.
+:::note
+The trigger returns newly created customer records based on the provided time range and limit. Ensure the correct timestamp is configured to avoid missing records.
+:::
 
 Click on **Continue**, then **Run** node
 
------------------------
+---
 
 ##### Example Configuration
 
 <img src="/img/credentials/big-commerce/AC-CRTNWCUSTMR2.jpg" alt="BigCommerce New Customer Created trigger — Example Configuration" width="700" />
 
----------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -170,45 +170,44 @@ Click on **Continue**, then **Run** node
   }
 ]
 ```
-
-</div>
-
---------------------------
+----
 
 #### Customers Update
 
-**Customers Update** trigger is activated whenever an existing customer record is updated in BigCommerce. It helps capture customer modifications for automation and workflow processing.
+Customers Update trigger is activated whenever an existing customer record is updated in BigCommerce. It helps capture customer modifications for automation and workflow processing.
 
-##### Select Credentials and Trigger Event
+##### Select Credentials and Trigger Events
 
-<img src="/img/credentials/big-commerce/C-CUSTMRUPDT3.jpg" alt="BigCommerce Customers Update trigger — Select Credentials and Trigger Event" width="700" />
+<img src="/img/credentials/big-commerce/C-CUSTMRUPDT3.jpg" alt="BigCommerce Customers Update trigger — Select Credentials and Trigger Events" width="700" />
 
 Click on **Continue** button
 
-----------------------
+----
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | Fetch Data Since | Specify the date and time to start fetching updated customers. (e.g., "01/04/2025 09:15") |
 | Limit | Define the maximum number of records to retrieve. (e.g., "10") |
 
-> **Note:** The trigger returns updated customer records based on the provided time range and limit. Ensure the correct timestamp is configured to avoid missing records.
+:::note
+The trigger returns updated customer records based on the provided time range and limit. Ensure the correct timestamp is configured to avoid missing records.
+:::
 
 Click on **Continue**, then **Run** node
 
------------------------
+---
 
 ##### Example Configuration
 
-> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
+:::note
+The configuration fields are the same for all triggers — refer to the screenshot above.
+:::
 
----------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -237,44 +236,44 @@ Click on **Continue**, then **Run** node
 ]
 ```
 
-</div>
-
---------------------------
+----
 
 #### Products Updated
 
-**Products Updated** trigger is activated whenever an existing product record is updated in BigCommerce. It helps capture product modifications for automation and workflow processing.
+Products Updated trigger is activated whenever an existing product record is updated in BigCommerce. It helps capture product modifications for automation and workflow processing.
 
-##### Select Credentials and Trigger Event
+##### Select Credentials and Trigger Events
 
-<img src="/img/credentials/big-commerce/C-PRDTUPDT4.jpg" alt="BigCommerce Products Updated trigger — Select Credentials and Trigger Event" width="700" />
+<img src="/img/credentials/big-commerce/C-PRDTUPDT4.jpg" alt="BigCommerce Products Updated trigger — Select Credentials and Trigger Events" width="700" />
 
 Click on **Continue** button
 
-----------------------
+----
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | Fetch Data Since | Specify the date and time to start fetching updated products. (e.g., "01/04/2025 09:15") |
 | Limit | Define the maximum number of records to retrieve. (e.g., "10") |
 
-> **Note:** The trigger returns updated product records based on the provided time range and limit. Ensure the correct timestamp is configured to avoid missing records.
+:::note
+The trigger returns updated product records based on the provided time range and limit. Ensure the correct timestamp is configured to avoid missing records.
+:::
 
 Click on **Continue**, then **Run** node
 
------------------------
+---
 
 ##### Example Configuration
 
-> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
+:::note
+The configuration fields are the same for all triggers — refer to the screenshot above.
+:::
 
----------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -356,44 +355,44 @@ Click on **Continue**, then **Run** node
 ]
 ```
 
-</div>
-
---------------------------
+----
 
 #### New Orders Created
 
-**New Orders Created** trigger is activated whenever a new order is created in BigCommerce. It helps capture newly created orders for automation and workflow processing.
+New Orders Created trigger is activated whenever a new order is created in BigCommerce. It helps capture newly created orders for automation and workflow processing.
 
-##### Select Credentials and Trigger Event
+##### Select Credentials and Trigger Events
 
-<img src="/img/credentials/big-commerce/C-NWORDCRTD5.jpg" alt="BigCommerce New Orders Created trigger — Select Credentials and Trigger Event" width="700" />
+<img src="/img/credentials/big-commerce/C-NWORDCRTD5.jpg" alt="BigCommerce New Orders Created trigger — Select Credentials and Trigger Events" width="700" />
 
 Click on **Continue** button
 
-----------------------
+----
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | Fetch Data Since | Specify the date and time to start fetching newly created orders. (e.g., "01/04/2025 09:15") |
 | Limit | Define the maximum number of records to retrieve. (e.g., "10") |
 
-> **Note:** The trigger returns newly created order records based on the provided time range and limit. Ensure the correct timestamp is configured to avoid missing records.
+:::note
+The trigger returns newly created order records based on the provided time range and limit. Ensure the correct timestamp is configured to avoid missing records.
+:::
 
 Click on **Continue**, then **Run** node
 
------------------------
+---
 
 ##### Example Configuration
 
-> **Note:** The configuration fields are the same for all triggers — refer to the screenshot above.
+:::note
+The configuration fields are the same for all triggers — refer to the screenshot above.
+:::
 
----------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -505,9 +504,7 @@ Click on **Continue**, then **Run** node
 ]
 ```
 
-</div>
-
---------------------------
+----
 
   </TabItem>
   <TabItem value="actions" label="Actions">
@@ -518,7 +515,7 @@ Click on **Continue**, then **Run** node
 
 #### Create a New Customer
 
-**Create a New Customer** action is used to create a customer record in BigCommerce with contact details, company information, tax settings, and address details.
+Create a New Customer action is used to create a customer record in BigCommerce with contact details, company information, tax settings, and address details.
 
 ##### Select Credentials and Action Events
 
@@ -526,12 +523,12 @@ Click on **Continue**, then **Run** node
 
 Click on **Continue** button
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | Email | Enter the customer email address. (e.g., "charlie.alisa@yopmail.com") |
 | Optional Fields | Additional customer fields that can be configured. |
 | First Name | Customer's first name. (e.g., "Charlie") |
@@ -553,11 +550,13 @@ Click on **Continue** button
 | Phone | Address contact number. (e.g., "9898712123") |
 | Address Type | Type of address. (e.g., "RESIDENTIAL") |
 
-> **Note:** Email is mandatory. Other fields are optional and can be configured based on business requirements.
+:::note
+Email is mandatory. Other fields are optional and can be configured based on business requirements.
+:::
 
 Click on **Continue**, then **Run** node
 
-----------------------------
+----
 
 ##### Example Configuration
 
@@ -565,11 +564,9 @@ Click on **Continue**, then **Run** node
 <img src="/img/credentials/big-commerce/AC-CRTNWCSTMR13.jpg" alt="BigCommerce Create a New Customer action — Example Configuration screenshot 2" width="700" />
 <img src="/img/credentials/big-commerce/AC-CRTNWCSTMR14.jpg" alt="BigCommerce Create a New Customer action — Example Configuration screenshot 3" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -621,26 +618,24 @@ Click on **Continue**, then **Run** node
 ]
 ```
 
-</div>
-
---------------------
+------
 
 #### Update an Existing Customer
 
-**Update an Existing Customer** action is used to modify an existing customer record in BigCommerce with updated contact details, company information, and tax settings.
+Update an Existing Customer action is used to modify an existing customer record in BigCommerce with updated contact details, company information, and tax settings.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-UPDTCUSTMR15.jpg" alt="BigCommerce Update an Existing Customer action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
-| Customer Id | Enter the unique customer identifier. (e.g., "681") |
+|-------|-------------|
+| Customer ID | Enter the unique customer identifier. (e.g., "681") |
 | Email | Enter the customer email address. (e.g., "charlie.alisa@yopmail.com") |
 | Optional Fields | Additional customer details that can be updated. |
 | First Name | Customer's first name. (e.g., "CharlieBen") |
@@ -650,21 +645,21 @@ Click on **Continue** button.
 | Notes | Additional notes about the customer. (e.g., "B2C - Customers only") |
 | Tax Exempt Category | Tax exemption category. (e.g., "Retailer") |
 
-> **Note:** Customer Id and Email are mandatory. Other fields are optional and can be configured based on business requirements.
+:::note
+Customer ID and Email are mandatory. Other fields are optional and can be configured based on business requirements.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-UPDTCUSTMR16.jpg" alt="BigCommerce Update an Existing Customer action — Example Configuration screenshot 1" width="700" />
 <img src="/img/credentials/big-commerce/AC-UPDTCUSTMR17.jpg" alt="BigCommerce Update an Existing Customer action — Example Configuration screenshot 2" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -701,41 +696,39 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
+----
 
-----------------------
+#### Get Customer Addresses by Customer ID
 
-#### Get Customer Addresses by Customer Id
-
-**Get Customer Addresses by Customer Id** action is used to retrieve all saved addresses associated with an existing customer in BigCommerce.
+Get Customer Addresses by Customer ID action is used to retrieve all saved addresses associated with an existing customer in BigCommerce.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-GTCUSTMRADDRSbyCUSTMRID18.jpg" alt="BigCommerce Get Customer Addresses by Customer ID action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
-| Customer Id | Enter the unique customer identifier. (e.g., "681") |
+|-------|-------------|
+| Customer ID | Enter the unique customer identifier. (e.g., "681") |
 
-> **Note:** Customer Id is mandatory. The action returns all addresses linked to the specified customer.
+:::note
+Customer ID is mandatory. The action returns all addresses linked to the specified customer.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-GTCUSTMRADDRSbyCUSTMRID19.jpg" alt="BigCommerce Get Customer Addresses by Customer ID action — Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -758,41 +751,39 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
-
-----------------------------
+----
 
 #### Get Customers by Email
 
-**Get Customers by Email** action is used to retrieve customer details in BigCommerce using the customer's email address.
+Get Customers by Email action is used to retrieve customer details in BigCommerce using the customer's email address.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-GTCUSTMRbyEML20.jpg" alt="BigCommerce Get Customers by Email action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | Email | Enter the customer email address. (e.g., "charlie.alisa@yopmail.com") |
 
-> **Note:** Email is mandatory. The action returns matching customer records for the specified email address.
+:::note
+Email is mandatory. The action returns matching customer records for the specified email address.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-GTCUSTMRbyEML21.jpg" alt="BigCommerce Get Customers by Email action — Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -819,43 +810,41 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
+---
 
--------------------------
-
-### Customer Addressess Actions
+### Customer Addresses Actions
 
 #### Get Customer Addresses
 
-**Get Customer Addresses** action is used to retrieve all saved addresses associated with an existing customer in BigCommerce.
+Get Customer Addresses action is used to retrieve all saved addresses associated with an existing customer in BigCommerce.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-GTCUSTMRADDRSbyCUSTMRID18.jpg" alt="BigCommerce Get Customer Addresses action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
-| Customer Id | Enter the unique customer identifier. (e.g., "681") |
+|-------|-------------|
+| Customer ID | Enter the unique customer identifier. (e.g., "681") |
 
-> **Note:** Customer Id is mandatory. The action returns all addresses linked to the specified customer.
+:::note
+Customer ID is mandatory. The action returns all addresses linked to the specified customer.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-GTCUSTMRADDRSES23.jpg" alt="BigCommerce Get Customer Addresses action — Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -891,26 +880,24 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
-
-------------------
+------
 
 #### Update Customer Addresses
 
-**Update Customer Addresses** action is used to modify an existing customer address in BigCommerce with updated contact and location details.
+Update Customer Addresses action is used to modify an existing customer address in BigCommerce with updated contact and location details.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-UPDTADRES24.jpg" alt="BigCommerce Update Customer Addresses action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
-| Address Id (Identifier) | Enter the unique address identifier. (e.g., "367") |
+|-------|-------------|
+| Address ID (Identifier) | Enter the unique address identifier. (e.g., "367") |
 | Optional Fields | Additional address details that can be updated. |
 | First Name | Recipient's first name. (e.g., "MehathaBenarji") |
 | Last Name | Recipient's last name. (e.g., "BenRaji") |
@@ -922,21 +909,21 @@ Click on **Continue** button.
 | Country Code | Country code. (e.g., "IN") |
 | Phone | Contact phone number. (e.g., "9898712111") |
 
-> **Note:** Address Id is mandatory. Only the provided optional fields will be updated.
+:::note
+Address ID is mandatory. Only the provided optional fields will be updated.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-UPDTADRES25.jpg" alt="BigCommerce Update Customer Addresses action — Example Configuration screenshot 1" width="700" />
 <img src="/img/credentials/big-commerce/AC-UPDTADRES26.jpg" alt="BigCommerce Update Customer Addresses action — Example Configuration screenshot 2" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -963,26 +950,24 @@ Click on **Continue**, then **Run** node.
   }
 ]
 ```
-
-</div>
-
-### Product Action
+---
+### Product Actions
 
 #### Create a New Product
 
-**Create a New Product** action is used to create a new product in BigCommerce with pricing, dimensions, inventory, and visibility settings.
+Create a New Product action is used to create a new product in BigCommerce with pricing, dimensions, inventory, and visibility settings.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-CRTPRDT27.jpg" alt="BigCommerce Create a New Product action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | Product Name | Enter the product name. (e.g., "Nayasa-FuelUp") |
 | Product Type | Specify the product type. (e.g., "physical") |
 | Price | Enter the selling price of the product. (e.g., "250") |
@@ -1001,21 +986,21 @@ Click on **Continue** button.
 | Cost Price | Product cost price. (e.g., "200") |
 | Retail Price | Product retail price. (e.g., "210") |
 
-> **Note:** Product Name, Product Type, Price, and Weight are mandatory. Other fields are optional and can be configured based on business requirements.
+:::note
+Product Name, Product Type, Price, and Weight are mandatory. Other fields are optional and can be configured based on business requirements.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-CRTPRDT28.jpg" alt="BigCommerce Create a New Product action — Example Configuration screenshot 1" width="700" />
 <img src="/img/credentials/big-commerce/AC-CRTPRDT29.jpg" alt="BigCommerce Create a New Product action — Example Configuration screenshot 2" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -1138,26 +1123,24 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
-
------------------------
+---
 
 #### Update Product
 
-**Update Product** action is used to modify an existing product in BigCommerce with updated product details, pricing, dimensions, and feature settings.
+Update Product action is used to modify an existing product in BigCommerce with updated product details, pricing, dimensions, and feature settings.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-UPDTPRDT30.jpg" alt="BigCommerce Update Product action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
-| Product Id | Enter the unique product identifier. (e.g., "785") |
+|-------|-------------|
+| Product ID | Enter the unique product identifier. (e.g., "785") |
 | Optional Fields | Additional product details that can be updated. |
 | Product Name | Product name. (e.g., "Nayasa FuelUp Hydration Bottle") |
 | SKU | Stock keeping unit code. (e.g., "NAYASA001") |
@@ -1172,21 +1155,21 @@ Click on **Continue** button.
 | Cost Price | Product cost price. (e.g., "150") |
 | Retail Price | Product retail price. (e.g., "200") |
 
-> **Note:** Product Id is mandatory. Only the provided optional fields will be updated.
+:::note
+Product ID is mandatory. Only the provided optional fields will be updated.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-UPDTPRDT31.jpg" alt="BigCommerce Update Product action — Example Configuration screenshot 1" width="700" />
 <img src="/img/credentials/big-commerce/AC-UPDTPRDT32.jpg" alt="BigCommerce Update Product action — Example Configuration screenshot 2" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -1271,42 +1254,40 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
-
----------------------------
+---
 
 #### Update Inventory Level
 
-**Update Inventory Level** action is used to modify the available inventory quantity for an existing product in BigCommerce.
+Update Inventory Level action is used to modify the available inventory quantity for an existing product in BigCommerce.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-UPDTINVNTRYLVL33.jpg" alt="BigCommerce Update Inventory Level action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
-| Product Id | Enter the unique product identifier. (e.g., "785") |
+|-------|-------------|
+| Product ID | Enter the unique product identifier. (e.g., "785") |
 | Inventory Level | Enter the updated inventory quantity. (e.g., "500") |
 
-> **Note:** Product Id and Inventory Level are mandatory. The inventory quantity will be updated for the specified product.
+:::note
+Product ID and Inventory Level are mandatory. The inventory quantity will be updated for the specified product.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-UPDTINVNTRYLVL34.jpg" alt="BigCommerce Update Inventory Level action — Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -1391,43 +1372,41 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
-
----------------------
+-------
 
 ### Product Action
 
 #### Get Product by SKU
 
-**Get Product by SKU** action is used to retrieve product details in BigCommerce using the product SKU (Stock Keeping Unit).
+Get Product by SKU action is used to retrieve product details in BigCommerce using the product SKU (Stock Keeping Unit).
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-GTPRDTbySKU35.jpg" alt="BigCommerce Get Product by SKU action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | SKU | Enter the product SKU code. (e.g., "NAYASA001") |
 
-> **Note:** SKU is mandatory. The action returns matching product details for the specified SKU.
+:::note
+SKU is mandatory. The action returns matching product details for the specified SKU.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-GTPRDTbySKU36.jpg" alt="BigCommerce Get Product by SKU action — Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -1509,43 +1488,41 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
-
-----------------------
+----
 
 ### Orders Action
 
 #### Get Order by ID
 
-**Get Order by ID** action is used to retrieve order details in BigCommerce using the unique order identifier.
+Get Order by ID action is used to retrieve order details in BigCommerce using the unique order identifier.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-GTORDbyORDRID37.jpg" alt="BigCommerce Get Order by ID action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | Order ID | Enter the unique order identifier. (e.g., "519") |
 
-> **Note:** Order ID is mandatory. The action returns order details for the specified order.
+:::note
+Order ID is mandatory. The action returns order details for the specified order.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-GTORDbyORDRID38.jpg" alt="BigCommerce Get Order by ID action — Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -1657,25 +1634,23 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
-
------------------------
+---
 
 #### Update Order
 
-**Update Order** action is used to modify an existing order in BigCommerce with updated status, customer, payment, and message details.
+Update Order action is used to modify an existing order in BigCommerce with updated status, customer, payment, and message details.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-UPDTORD39.jpg" alt="BigCommerce Update Order action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | Order ID | Enter the unique order identifier. (e.g., "519") |
 | Optional Fields | Additional order details that can be updated. |
 | Order Status | Update the order status. (e.g., "Shipped") |
@@ -1684,20 +1659,20 @@ Click on **Continue** button.
 | Payment Provider ID | Enter the payment provider reference ID. (e.g., "TEST11") |
 | Customer Message | Message related to the order update. (e.g., "Order has been shipped.") |
 
-> **Note:** Order ID is mandatory. Only the provided optional fields will be updated.
+:::note
+Order ID is mandatory. Only the provided optional fields will be updated.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-UPDTORD40.jpg" alt="BigCommerce Update Order action — Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -1809,41 +1784,39 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
-
------------------------
+---
 
 #### Get Order Products
 
-**Get Order Products** action is used to retrieve all products associated with a specific order in BigCommerce.
+Get Order Products action is used to retrieve all products associated with a specific order in BigCommerce.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-GTORDRPRDTbyORDRId41.jpg" alt="BigCommerce Get Order Products action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
-| Order Id | Enter the unique order identifier. (e.g., "519") |
+|-------|-------------|
+| Order ID | Enter the unique order identifier. (e.g., "519") |
 
-> **Note:** Order Id is mandatory. The action returns all products linked to the specified order.
+:::note
+Order ID is mandatory. The action returns all products linked to the specified order.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-GTORDRPRDTbyORDRId42.jpg" alt="BigCommerce Get Order Products action — Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -1922,41 +1895,39 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
-
---------------------------
+----
 
 #### Get Order Shipping Addresses
 
-**Get Order Shipping Addresses** action is used to retrieve shipping address details associated with a specific order in BigCommerce.
+Get Order Shipping Addresses action is used to retrieve shipping address details associated with a specific order in BigCommerce.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-GTADDRSbyORDRID43.jpg" alt="BigCommerce Get Order Shipping Addresses action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
-| Order Id | Enter the unique order identifier. (e.g., "519") |
+|-------|-------------|
+| Order ID | Enter the unique order identifier. (e.g., "519") |
 
-> **Note:** Order Id is mandatory. The action returns shipping address details for the specified order.
+:::note
+Order ID is mandatory. The action returns shipping address details for the specified order.
+:::
 
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-GTADDRSbyORDRID44.jpg" alt="BigCommerce Get Order Shipping Addresses action — Example Configuration" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -2003,26 +1974,24 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
-
--------------------
+-------
 
 
 #### Create Order Fulfillment
 
-**Create Order Fulfillment** action is used to create a fulfillment for an existing order in BigCommerce with item quantities, tracking, shipping, and delivery details.
+Create Order Fulfillment action is used to create a fulfillment for an existing order in BigCommerce with item quantities, tracking, shipping, and delivery details.
 
 ##### Select Credentials and Action Events
 <img src="/img/credentials/big-commerce/C-CRTORDFUFLMNT45.jpg" alt="BigCommerce Create Order Fulfillment action — Select Credentials and Action Event" width="700" />
 
 Click on **Continue** button.
 
----------------------------
+---
 
 ##### Configuration Fields
 
 | Field | Description |
-|------|-------------|
+|-------|-------------|
 | Order ID | Enter the unique order identifier. (e.g., "519") |
 | Order Address ID | Enter the order shipping address identifier. (e.g., "420") |
 | Items | Add one or more order items for fulfillment. |
@@ -2036,21 +2005,20 @@ Click on **Continue** button.
 | Merchant Shipping Cost | Enter the shipping cost charged by merchant. (e.g., "300") |
 | Comments | Additional notes for the fulfillment. (e.g., "Fulfilment-Order") |
 
-> **Note:** Order ID, Order Address ID, Items, Tracking Number, Order Product ID, and Quantity are mandatory. Additional items can be added as needed.
-
+:::note
+Order ID, Order Address ID, Items, Tracking Number, Order Product ID, and Quantity are mandatory. Additional items can be added as needed.
+:::
 Click on **Continue**, then **Run** node.
 
--------------------------
+---
 
 ##### Example Configuration
 <img src="/img/credentials/big-commerce/AC-CRTORDFUFLMNT46.jpg" alt="BigCommerce Create Order Fulfillment action — Example Configuration screenshot 1" width="700" />
 <img src="/img/credentials/big-commerce/AC-CRTORDFUFLMNT47.jpg" alt="BigCommerce Create Order Fulfillment action — Example Configuration screenshot 2" width="700" />
 
--------------------------
+---
 
 ##### Result
-
-<div class="scrollable-code">
 
 ```json
 [
@@ -2108,8 +2076,7 @@ Click on **Continue**, then **Run** node.
 ]
 ```
 
-</div>
------------------------
+---
 
 </TabItem>
 </Tabs>
